@@ -1,0 +1,244 @@
+.footer {
+  background-color: var(--grape);
+
+  &__content {
+    .top {
+      padding: 72px 0 32px;
+      gap: 30px;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .logo {
+          display: flex;
+
+          a {
+            position: relative;
+            display: flex;
+            min-width: 202px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              inset: -4px;
+              border: 1px solid var(--pink);
+              opacity: 0;
+              transition: opacity 0.4s ease-in-out;
+            }
+
+            &:focus,
+            &:focus-visible {
+              outline: none;
+            }
+
+            &:focus-visible {
+              &::before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .middle {
+        .box-menu {
+          max-width: 820px;
+          &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 28px;
+
+            li {
+              width: max-content;
+            }
+          }
+
+          &__dropDown {
+            display: none;
+          }
+
+          &__link {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--white);
+            transition: color 0.4s ease-in-out;
+
+            &:focus,
+            &:focus-visible {
+              outline: none;
+            }
+
+            &:focus-visible,
+            &:hover,
+            &:active {
+              color: var(--pink);
+            }
+          }
+        }
+      }
+
+      .right {
+        &__list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+
+        .network {
+          &__link {
+            display: flex;
+
+            .svg {
+              width: 48px;
+              min-width: 48px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: var(--violet);
+              transition: background-color 0.4s ease-in-out;
+            }
+
+            &:focus,
+            &:focus-visible {
+              outline: none;
+            }
+
+            &:focus-visible,
+            &:hover,
+            &:active {
+              .svg {
+                background-color: var(--grape);
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .bottom {
+      padding: 32px 0;
+      &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #988db4;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer {
+    &__content {
+      .top {
+        .middle {
+          .box-menu {
+            &__list {
+              column-gap: calc(30px + (100 - 30) * ((100vw - 1024px) / (1400 - 1024)));
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer {
+    &__content {
+      .top {
+        .middle {
+          .box-menu {
+            max-width: 401px;
+            &__list {
+              grid-template-columns: 1.2fr 0.8fr;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    &__content {
+      .top {
+        flex-direction: column;
+        gap: 40px;
+        .left {
+          width: 100%;
+          align-items: center;
+        }
+        .middle {
+          width: 100%;
+          .box-menu {
+            max-width: 100%;
+          }
+        }
+        .right {
+          width: 100%;
+          &__list {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .footer {
+    &__content {
+      .top {
+        padding: 40px 0 8px;
+        .left {
+          gap: 24px;
+          .logo {
+            a {
+              width: 187px;
+              min-width: 187px;
+              height: 74px;
+            }
+          }
+          .box-estimation {
+            max-width: 172px;
+          }
+        }
+        .middle {
+          .box-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            &__list {
+              grid-template-columns: 1fr;
+              gap: 24px;
+              li:nth-child(n+4) {
+                  display: none;
+              }
+            }
+            &__dropDown {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+            }
+          }
+        }
+      }
+      .bottom {
+        padding: 8px 0 32px;
+      }
+    }
+  }
+}

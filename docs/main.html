@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link href="css/normalize.min.css?_v=20250912090447" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250912090447" rel="stylesheet">
+  <link href="css/style.css?_v=20250912090447" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250912090447"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250912090447" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250912090447" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250912090447" defer></script>
+  <script src="js/cleave.js?_v=20250912090447" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250912090447" defer></script>
+  <script src="js/fslightbox.js?_v=20250912090447" defer></script>
+  <script type="module" src="js/main.js?_v=20250912090447"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__line-top">
+    <div class="header__container container">
+      <div class="content">
+        <p class="content__desc">
+          <span>
+            <img src="img/header/delivery.svg" alt="svg">
+          </span>
+          Бесплатная доставка розничных заказов по РФ от 6000 руб
+        </p>
+        <a href="tel:+78127673905" class="tel-link">+7 812 767 39 05</a>
+      </div>
+    </div>
+  </div>
+  <div class="header__line-bottom">
+    <div class="header__container container">
+      <div class="content">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo/logo-header.svg" alt="logo">
+          </a>
+        </div>
+
+        <nav class="nav burger-menu">
+          <ul class="nav__list list-reset">
+            <li>
+              <a class="nav__link" href="#">
+                <span class="text">
+                  магазин
+                </span>
+              </a>
+            </li>
+            <li>
+              <div class="dropDown1">
+  <a href="#" class="dropDown1__main-link">
+    <span class="text">Услуги</span>
+    <span class="svg">
+      <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+      </svg>
+    </span>
+  </a>
+  <div class="dropDown1__box-list">
+    <ul class="dropDown1__list list-reset">
+      <li>
+        <a href="#" class="dropDown1__link">
+          школа бариста
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          Кофе машина в аренду
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          Контрактная обжарка
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          Кофе оптом
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </li>
+            <li>
+              <div class="dropDown1">
+  <a href="#" class="dropDown1__main-link">
+    <span class="text">информация</span>
+    <span class="svg">
+      <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDropDown1"></use>
+      </svg>
+    </span>
+  </a>
+  <div class="dropDown1__box-list">
+    <ul class="dropDown1__list list-reset">
+      <li>
+        <a href="#" class="dropDown1__link">
+          информация
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          информация в аренду
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          Контрактная информация
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          Кофе информация
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDown1__link">
+          информация информация
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </li>
+            <li>
+              <a class="nav__link" href="#">
+                <span class="text">
+                  блог
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="brn-group">
+          <a href="" class="brn-group__link search"></a>
+          <a href="" class="brn-group__link logIn"></a>
+          <a href="" class="brn-group__link like">
+            <span class="counter">
+              1
+            </span>
+          </a>
+          <a href="" class="brn-group__link basket">
+            <span class="counter">
+              3
+            </span>
+          </a>
+        </div>
+        <div class="box-burger">
+          <button class="burger btn-reset">
+            <span class="svg-burger">
+              <svg width="52" height="28" viewBox="0 0 52 28" fill="none">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </span>
+            <span class="svg-close">
+
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="section-shop">
+  <div class="section-shop__content">
+    <div class="section-shop__container container">
+      <h2 class="section-title">
+        Магазин
+      </h2>
+    </div>
+    <div class="top">
+      <div class="section-shop__container container">
+        <ul class="top__list list-reset">
+          <li>
+            <div class="card-shop" style="background-image: url(img/card-shop/bg-1.jpg);">
+              <a href="#" class="card-shop__link" style="background-image: url(img/card-shop/1.png);">
+                <span class="corner top">
+                  <svg width="100%" height="472" viewBox="0 0 504 472" fill="none">
+                    <use xlink:href="img/sprite.svg#cardBg"></use>
+                  </svg>
+                </span>
+                <picture>
+                  <source srcset="img/card-shop/1-1000.svg" media="(max-width: 1000px)">
+                  <source srcset="img/card-shop/1-1100.svg" media="(max-width: 1200px)">
+                  <img class="card-shop__img" src="img/card-shop/1.svg" alt="img">
+                </picture>
+                <!--<img class="card-shop__img" src="img/card-shop/1.svg" alt="img">-->
+                <h3 class="card-shop__title">Кофе</h3>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="card-shop" style="background-image: url(img/card-shop/bg-2.jpg);">
+              <a href="#" class="card-shop__link" style="background-image: url(img/card-shop/2.png);">
+                <span class="corner top">
+                  <svg width="504" height="472" viewBox="0 0 504 472" fill="none">
+                    <use xlink:href="img/sprite.svg#cardBg"></use>
+                  </svg>
+                </span>
+                <picture>
+                  <source srcset="img/card-shop/2-1000.svg" media="(max-width: 1000px)">
+                  <source srcset="img/card-shop/2-1100.svg" media="(max-width: 1200px)">
+                  <img class="card-shop__img" src="img/card-shop/2.svg" alt="img">
+                </picture>
+                <!--<img class="card-shop__img" src="img/card-shop/2.svg" alt="img">-->
+                <h3 class="card-shop__title">Чай</h3>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="card-shop" style="background-image: url(img/card-shop/bg-3.jpg);">
+              <a href="#" class="card-shop__link" style="background-image: url(img/card-shop/3.png);">
+                <span class="corner top">
+                  <svg width="504" height="472" viewBox="0 0 504 472" fill="none">
+                    <use xlink:href="img/sprite.svg#cardBg"></use>
+                  </svg>
+                </span>
+                <picture>
+                  <source srcset="img/card-shop/3-1000.svg" media="(max-width: 1000px)">
+                  <source srcset="img/card-shop/3-1100.svg" media="(max-width: 1200px)">
+                  <img class="card-shop__img" src="img/card-shop/3.svg" alt="img">
+                </picture>
+                <!--<img class="card-shop__img" src="img/card-shop/3.svg" alt="img">-->
+                <h3 class="card-shop__title">Мерч</h3>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="bottom">
+      <div class="section-shop__container container">
+        <ul class="bottom__list list-reset">
+          <li>
+            <div class="card-advantages">
+              <div class="card-advantages__top">
+                <p>10 ЛЕТ</p>
+              </div>
+              <div class="card-advantages__bottom">
+                <p>Занимаемся обжаркой кофе</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card-advantages">
+              <div class="card-advantages__top">
+                <span>
+                  <svg width="36" height="50" viewBox="0 0 36 50" fill="none">
+                    <use xlink:href="img/sprite.svg#bol"></use>
+                  </svg>
+                </span>
+                <p>4000</p>
+              </div>
+              <div class="card-advantages__bottom">
+                <p>Довольных клиентов</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="card-advantages">
+              <div class="card-advantages__top">
+                <span>
+                  <svg width="36" height="50" viewBox="0 0 36 50" fill="none">
+                    <use xlink:href="img/sprite.svg#bol"></use>
+                  </svg>
+                </span>
+                <p>1000</p>
+              </div>
+              <div class="card-advantages__bottom">
+                <p>Тонн cвежеображенного кофе</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+    <section class="section-why section">
+  <div class="section-why__container container">
+    <h2 class="section-title">
+      Почему мы?
+    </h2>
+    <div class="section-why__content">
+
+      <div class="swiper-why swiper">
+        <ul class="swiper-wrapper section-why__list list-reset">
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/1.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  Работаем без склада
+                </h3>
+                <p class="card-why__desc">
+                  Обжарим ваш кофе после поступления заказа и отправим на следующий будний день. Заказывая кофе на нашем сайте, вы получаете более свежий продукт.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/2.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  Стабильный вкус 
+                </h3>
+                <p class="card-why__desc">
+                  Благодаря использованию чугунных обжарочных машин, правильному хранению и контролю качества мы гарантируем чистый и стабильный вкус продукта.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/3.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  Доставка
+                </h3>
+                <p class="card-why__desc">
+                  Для розницы — бесплатная доставка по РФ от 5 000 ₽ (СДЭК, Boxberry, «Почта РФ», 5post). Для опта — бесплатная доставка до терминала в СПб или «Деловые Линии», ПЭК.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/4.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  8 лет на рынке
+                </h3>
+                <p class="card-why__desc">
+                  За это время мы обжарили более 1000 тонн кофе для любителей кофе, кафе и ресторанов РФ. Нам доверяют уже 4000 клиентов по всей России.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/5.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  Сервис
+                </h3>
+                <p class="card-why__desc">
+                  Покупайте в пару кликов через удобную корзину от Т-Банка. Наши специалисты проконсультируют вас по всем вопросам — мы на связи в WhatsApp и Telegram.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-why">
+              <div class="card-why__box-top">
+                <span class="svg">
+                  <img src="img/section-why/6.svg" alt="svg">
+                </span>
+              </div>
+
+              <div class="card-why__box-bottom">
+                <h3 class="card-why__title">
+                  Большой выбор
+                </h3>
+                <p class="card-why__desc">
+                  У нас вы найдёте 15 сортов кофе из разных стран, 4 фирменных смеси, а также чай, мерч, аксессуары, подарки и сертификаты.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-why-pagination"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__content">
+      <div class="top">
+        <div class="left">
+          <div class="logo">
+            <a href="/">
+              <img src="img/logo/logo-footer.svg" alt="logo">
+            </a>
+          </div>
+
+          <div class="box-estimation">
+            <picture><source srcset="img/footer/estimation.webp" type="image/webp"><img src="img/footer/estimation.jpg" alt="img"></picture>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="box-menu">
+            <ul class="box-menu__list list-reset">
+              <li>
+                <a href="#" class="box-menu__link">
+                  Главная
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Контрактная обжарка
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Реквизиты
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Магазин
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Оферта
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Школа бариста
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Политика конфиденциальности
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Блог кофеманов
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Кофемашина в аренду
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Команда
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Ремонт оборудования
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Локация
+                </a>
+              </li>
+              <li>
+                <a href="#" class="box-menu__link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="box-menu__dropDown">
+              <div class="dropDownFooter1">
+  <button class="dropDownFooter1__btn btn-reset">
+    <span class="text">Услуги</span>
+    <span class="svg">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDropDownFooter1"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="dropDownFooter1__box-list">
+    <ul class="dropDownFooter1__list list-reset">
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          школа бариста
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе машина в аренду
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Контрактная обжарка
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе оптом
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+              <div class="dropDownFooter1">
+  <button class="dropDownFooter1__btn btn-reset">
+    <span class="text">Контент</span>
+    <span class="svg">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDropDownFooter1"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="dropDownFooter1__box-list">
+    <ul class="dropDownFooter1__list list-reset">
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Контент бариста
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент в аренду
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Контент обжарка
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+              <div class="dropDownFooter1">
+  <button class="dropDownFooter1__btn btn-reset">
+    <span class="text">Информация</span>
+    <span class="svg">
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDropDownFooter1"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="dropDownFooter1__box-list">
+    <ul class="dropDownFooter1__list list-reset">
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Контент бариста
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент в аренду
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Контент обжарка
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropDownFooter1__link">
+          Кофе Контент
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <ul class="right__list network list-reset">
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <use xlink:href="img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="28" height="21" viewBox="0 0 28 21" fill="none">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="28" height="22" viewBox="0 0 28 22" fill="none">
+                    <use xlink:href="img/sprite.svg#mailIcon"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="28" height="19" viewBox="0 0 28 19" fill="none">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="28" height="15" viewBox="0 0 28 15" fill="none">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="network__link">
+                <span class="svg">
+                  <svg width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <p class="bottom__desc">
+          *Организация Meta Platforms Inc. (соцсети Фейсбук, Инстаграм) признана экстремистской, её деятельность запрещена на территории РФ.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

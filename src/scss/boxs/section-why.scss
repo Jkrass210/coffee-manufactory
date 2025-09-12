@@ -1,0 +1,33 @@
+.section-why {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    li:nth-child(even) {
+      .card-why {
+        background-color: var(--black);
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .section-why {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li:nth-child(3) {
+        .card-why {
+          background-color: var(--black);
+        }
+      }
+
+      li:nth-child(4) {
+        .card-why {
+          background-color: var(--pink);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.section-shop {
+  &__content {
+    .top {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .bottom {
+      position: relative;
+      padding: 240px 0;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -252px 0;
+        z-index: -2;
+        background-image: url(../img/card-advanteres/coffee_beans.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .section-shop {
+    &__content {
+      .bottom {
+        &__list {
+          li:first-child {
+            justify-content: start;
+          }
+          li:last-child {
+            justify-content: end;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-shop {
+    &__content {
+      .top {
+        &__list {
+          gap: 24px;
+        }
+      }
+      .bottom {
+        padding: 156px 0;
+        &::before {
+          inset: -164px 0;
+          background-image: url(../img/card-advanteres/coffee_beans-1100.png);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-shop {
+    &__content {
+      .top {
+        &__list {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+      .bottom {
+        &__list {
+          gap: 40px;
+          grid-template-columns: 1fr;
+          li {
+            justify-content: start !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-shop {
+    &__content {
+      .bottom {
+        padding: 124px 0;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,59 @@
+.dropDownFooter1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__btn {
+    display: flex;
+    gap: 4px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    .svg {
+      width: 20px;
+      min-height: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+    &.active {
+      & + .dropDownFooter1__box-list {
+        display: flex;
+      }
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__box-list {
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    transition: color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--pink);
+    }
+  }
+}

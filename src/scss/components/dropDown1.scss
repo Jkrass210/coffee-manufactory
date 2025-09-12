@@ -1,0 +1,159 @@
+.dropDown1 {
+  position: relative;
+
+  &__main-link {
+    display: flex;
+    gap: 6px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 91%;
+    text-align: center;
+    color: var(--white);
+    transition: color 0.4s ease-in-out;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:has(+ .dropDown1__box-list:hover) {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      color: var(--pink);
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      &+.dropDown1__box-list {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__box-list {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    min-width: 306px;
+    position: absolute;
+    top: calc(100% + 14px);
+    background-color: var(--grape);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      content: '';
+      width: 100%;
+      height: 14px;
+      background-image: url(../img/dropDown1/1.svg);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center bottom;
+    }
+
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    white-space: nowrap;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 80%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: background-color 0.4s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      background-color: var(--pink);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .dropDown1 {
+    &__main-link {
+      font-size: 17px;
+    }
+
+    &__link {
+      padding: 17px;
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .dropDown1 {
+    &__main-link {
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        &+.dropDown1__box-list {
+          display: block;
+        }
+
+      }
+    }
+
+    &__box-list {
+      display: none;
+      padding-top: 10px;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      transform: none;
+      background-color: transparent;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

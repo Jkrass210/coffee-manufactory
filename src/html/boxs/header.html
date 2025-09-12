@@ -1,0 +1,78 @@
+<header class="header" id="header">
+  <div class="header__line-top">
+    <div class="header__container container">
+      <div class="content">
+        <p class="content__desc">
+          <span>
+            <img src="img/header/delivery.svg" alt="svg">
+          </span>
+          Бесплатная доставка розничных заказов по РФ от 6000 руб
+        </p>
+        <a href="tel:+78127673905" class="tel-link">+7 812 767 39 05</a>
+      </div>
+    </div>
+  </div>
+  <div class="header__line-bottom">
+    <div class="header__container container">
+      <div class="content">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo/logo-header.svg" alt="logo">
+          </a>
+        </div>
+
+        <nav class="nav burger-menu">
+          <ul class="nav__list list-reset">
+            <li>
+              <a class="nav__link" href="#">
+                <span class="text">
+                  магазин
+                </span>
+              </a>
+            </li>
+            <li>
+              @@include('../components/dropDown1.html')
+            </li>
+            <li>
+              @@include('../components/dropDown2.html')
+            </li>
+            <li>
+              <a class="nav__link" href="#">
+                <span class="text">
+                  блог
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="brn-group">
+          <a href="" class="brn-group__link search"></a>
+          <a href="" class="brn-group__link logIn"></a>
+          <a href="" class="brn-group__link like">
+            <span class="counter">
+              1
+            </span>
+          </a>
+          <a href="" class="brn-group__link basket">
+            <span class="counter">
+              3
+            </span>
+          </a>
+        </div>
+        <div class="box-burger">
+          <button class="burger btn-reset">
+            <span class="svg-burger">
+              <svg width="52" height="28" viewBox="0 0 52 28" fill="none">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </span>
+            <span class="svg-close">
+
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,399 @@
+.header {
+  position: relative;
+  z-index: 2;
+  &__line-top {
+    padding: 30px 0;
+    background-color: var(--grape);
+
+    .content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      &__desc {
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: var(--white);
+
+        span {
+          width: 36px;
+          min-width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  &__line-bottom {
+    padding: 26px 0;
+
+    .content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        display: flex;
+
+        a {
+          position: relative;
+          display: flex;
+          min-width: 228px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 1px solid var(--pink);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+          }
+
+          &:focus,
+          &:focus-visible {
+            outline: none;
+          }
+
+          &:focus-visible {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 44px;
+          //gap: calc(32px + (44 - 32) * ((100vw - 1024px) / (1520 - 1024)));
+        }
+
+        &__link {
+          display: flex;
+          align-items: center;
+          font-family: var(--second-family);
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 91%;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--white);
+          transition: color 0.4s ease-in-out;
+
+          &:focus,
+          &:focus-visible {
+            outline: none;
+          }
+
+          &:focus-visible,
+          &:hover,
+          &:active {
+            color: var(--pink);
+          }
+        }
+      }
+
+      .brn-group {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        &__link {
+          font-family: "Font Awesome 5 Free";
+          width: 36px;
+          min-width: 36px;
+          height: 36px;
+          color: var(--white);
+          position: relative;
+          transition: color 0.4s ease-in-out;
+
+          &:focus,
+          &:focus-visible {
+            outline: none;
+          }
+
+          &:focus-visible,
+          &:hover,
+          &:active {
+            color: var(--pink);
+          }
+
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            display: flex;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+          }
+
+          &.search {
+            &::before {
+              content: "\f002";
+            }
+          }
+
+          &.logIn {
+            &::before {
+              content: "\f007";
+            }
+          }
+
+          &.like {
+            &::before {
+              content: "\f004";
+            }
+          }
+
+          &.basket {
+            &::before {
+              content: "\f291";
+            }
+          }
+
+          .counter {
+            position: absolute;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background-color: var(--pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--white);
+          }
+        }
+      }
+
+      .box-burger {
+        display: none;
+      }
+
+      .burger {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        min-width: 52px;
+        height: 28px;
+        color: var(--white);
+
+        &.active {
+          color: var(--pink);
+        }
+
+        &:focus,
+        &:focus-visible {
+          outline: none;
+        }
+
+        &:focus-visible,
+        &:hover,
+        &:active {}
+      }
+
+    }
+  }
+}
+
+
+
+@media (max-width: 1100px) {
+  .header {
+    &__line-top {
+      padding: 14px 0;
+
+      .content {
+        justify-content: space-between;
+
+        &__desc {
+          position: static;
+          transform: none;
+          gap: 8px;
+          font-size: 16px;
+
+          span {
+            width: 28px;
+            min-width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+
+    &__line-bottom {
+      padding: 20px 0;
+
+      .content {
+        .logo {
+          a {
+            width: 185px;
+            min-width: 171px;
+          }
+        }
+
+        .nav {
+          position: static;
+          transform: none;
+          padding-right: calc(0px + (24 - 0) * ((100vw - 710px) / (1024 - 710)));
+
+          &__list {
+            gap: calc(15px + (32 - 15) * ((100vw - 710px) / (1024 - 710)));
+          }
+
+          &__link {
+            font-size: 17px;
+          }
+        }
+
+        .brn-group {
+          gap: 16px;
+
+          &__link {
+            width: 28px;
+            min-width: 28px;
+            height: 28px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    &__line-top {
+      padding: 12px 0;
+
+      .content {
+        &__desc {
+          white-space: wrap;
+          text-align: start;
+        }
+      }
+    }
+
+    &__line-bottom {
+      .content {
+
+        .nav {
+          opacity: 0;
+          visibility: hidden;
+          z-index: 0;
+          transform: translate(-120%);
+          position: fixed;
+          inset: 0;
+          //z-index: 2;
+          padding: 110px 16px 24px;
+          background-color: var(--violet);
+          transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+          &.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+            transform: none;
+          }
+
+          &__list {
+            justify-content: start;
+            height: 100%;
+            max-height: calc(100vh - 86px - 24px);
+            overflow: auto;
+            gap: 20px;
+            flex-direction: column;
+            align-items: start;
+
+            &::-webkit-scrollbar {
+              width: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background-color: var(--violet);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: var(--pink);
+            }
+          }
+        }
+
+        .brn-group {
+          display: none;
+        }
+
+        .box-burger {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .nav__list {
+      scrollbar-width: thin;
+      scrollbar-color: var(--pink) var(--violet);
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .header {
+    &__line-top {
+      .content {
+        &__desc {
+          font-size: 13px;
+          line-height: 115%;
+
+          span {
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    &__line-bottom {
+      padding: 10px 0;
+      .content {
+        .logo {
+          a {
+            width: 171px;
+            height: 48px;
+          }
+        }
+      }
+    }
+  }
+}

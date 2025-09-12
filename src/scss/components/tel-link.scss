@@ -1,0 +1,27 @@
+.tel-link {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 111%;
+  text-align: center;
+  color: var(--white);
+  transition: color 0.4s ease-in-out;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    color: var(--pink);
+  }
+}
+
+@media (max-width: 1100px) {
+  .tel-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .tel-link {
+    display: none;
+  }
+}
