@@ -69,6 +69,8 @@ function handleResize() {
 // Добавляем обработчик ресайза
 window.addEventListener('resize', handleResize);*/
 
+
+
 // swiper-why.js (упрощенный рабочий вариант)
 const BREAKPOINT = 850;
 let resizeTimeout;
@@ -135,5 +137,3 @@ function handleResize() {
 // Добавляем обработчик
 window.addEventListener('resize', handleResize);
 
-// Экспортируем функцию для ручного вызова
-export { initSwiperWhy };
