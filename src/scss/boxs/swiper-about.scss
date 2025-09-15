@@ -18,16 +18,15 @@
     width: 51px;
     height: 51px;
     display: flex;
-    border: 1px solid var(--black);
     align-items: center;
     justify-content: center;
     background-color: #1d1d1d;
-    transition: border-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:focus,&:focus-visible {
       outline: none;
     }
     &:focus-visible,&:hover,&:active {
-      border-color: #1d1d1d;
+      background-color: var(--pink);
     }
     &.swiper-button-disabled {
       pointer-events: none;

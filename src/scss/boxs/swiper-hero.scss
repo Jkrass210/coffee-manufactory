@@ -15,16 +15,16 @@
     .swiper-pagination-bullet {
       margin: 0 !important;
       opacity: 1;
-      width: 10.6px;
-      min-width: 10.6px;
-      height: 10.6px;
+      width: 14.6px;
+      min-width: 14.6px;
+      height: 14.6px;
       background-color: transparent;
       border: 1.4px solid var(--pink);
       transition: width 0.4s ease-in-out, border 0.4s ease-in-out, border-radius 0.4s ease-in-out, background-color 0.4s ease-in-out;
 
       &.swiper-pagination-bullet-active {
         position: relative;
-        width: 48px;
+        width: 56px;
         border: none;
         border-radius: 100px;
         background-color: #4b232d;

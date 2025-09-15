@@ -1,15 +1,20 @@
 .card-shop {
   position: relative;
+  z-index: 3;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  transition: transform 0.4s ease-in-out;
   &::before {
     content: '';
     display: block;
     padding-top: 93.5%;
   }
+  &:has(.card-shop__link:hover) {
+    transform: translate(-16px, -16px);
+  }
   &__link {
-    padding: 52px;
+    padding: 52px 52px 38px;
     position: absolute;
     inset: 0;
     display: flex;
@@ -17,7 +22,8 @@
     flex-direction: column;
     justify-content: space-between;
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right, center center;
+    background-size: 278px 215px, cover;
     &:focus,&:focus-visible {
       outline: none;
     }
@@ -62,8 +68,14 @@
     &::before {
       padding-top: 95.5%;
     }
+    &:has(.card-shop__link:hover) {
+      transform: none;
+    }
     &__link {
-      background-size: 170px 140px;
+      background-size: 170px 140px, cover;
+      .corner {
+        display: none;
+      }
     }
     &__title {
       font-size: 28px;

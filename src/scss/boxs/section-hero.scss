@@ -1,6 +1,6 @@
 .section-hero {
   &__bottom {
-    padding: 36px 0;
+    padding: 36px 0 30px;
     background-color: var(--grape);
     background-image: url(../img/hero/bottom-line/1.svg), url(../img/hero/bottom-line/2.svg);
     background-repeat: no-repeat;
@@ -32,8 +32,9 @@
   &__list {
     position: relative;
     z-index: 2;
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: minmax(auto, 253px) 1fr 1fr minmax(auto, 253px);
+    gap: 0px;
     justify-content: space-between;
     align-items: center;
 
@@ -82,6 +83,9 @@
     &__bottom {
       padding: 32px 0;
       background-image: url(../img/hero/bottom-line/1-1100.svg), url(../img/hero/bottom-line/2-1100.svg);
+    }
+    &__list {
+      grid-template-columns: minmax(auto, 160px) 1fr 1fr minmax(auto, 160px);
     }
     &__link-bottom {
       font-size: 20px;

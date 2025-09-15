@@ -46,8 +46,19 @@
       }
 
       .middle {
+        width: 100%;
+        max-width: 820px;
         .box-menu {
-          max-width: 820px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          &__list-col {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+          }
+
           &__list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;

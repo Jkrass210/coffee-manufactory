@@ -10,7 +10,7 @@
 
     .bottom {
       position: relative;
-      padding: 240px 0;
+      padding: 254px 0 234px;
       &::before {
         content: '';
         position: absolute;
@@ -20,6 +20,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        transform: translateY(44px);
       }
       &__list {
         display: grid;
