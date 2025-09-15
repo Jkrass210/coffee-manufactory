@@ -1,0 +1,197 @@
+<section class="section-place section">
+  <div class="section-place__container container">
+    <div class="section-place__line-title">
+      <h2 class="section-title-2">
+        Где попробовать наше кофе?
+      </h2>
+    </div>
+
+    <div class="section-place__content">
+      <div class="section-place__places">
+
+        <div class="section-place__scroll-wrapp">
+          <ul class="section-place__list list-reset">
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <!--в мобильной версии оставляю винимыми только 3 элемента списка, скрываю с помощью стилей, возможно нужно убрать????????-->
+          </ul>
+        </div>
+
+        <div class="section-place__hidden">
+          <a href="#" class="section-place__still-btn">
+            <span class="text">
+              Показать еще
+            </span>
+            <span class="svg">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+      <div class="section-place__map" id="map"></div>
+
+      <script>
+        ymaps.ready(init);
+
+        function init() {
+          const map = new ymaps.Map("map", {
+            center: [59.931253, 30.355830],
+            zoom: 11
+          });
+
+          const placemark1 = new ymaps.Placemark(
+            [59.931247, 30.355825],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/1.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark2 = new ymaps.Placemark(
+            [59.931111, 30.355700],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/2.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark3 = new ymaps.Placemark(
+            [59.931400, 30.355760],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/3.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark4 = new ymaps.Placemark(
+            [59.931500, 30.355900],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/4.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark5 = new ymaps.Placemark(
+            [59.931600, 30.356000],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/5.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          map.geoObjects.add(placemark1);
+          map.geoObjects.add(placemark2);
+          map.geoObjects.add(placemark3);
+          map.geoObjects.add(placemark4);
+          map.geoObjects.add(placemark5);
+
+          map.setBounds(map.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 50
+          });
+
+        }
+      </script>
+    </div>
+
+  </div>
+</section>

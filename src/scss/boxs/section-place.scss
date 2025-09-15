@@ -1,0 +1,142 @@
+.section-place {
+  &__line-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    display: flex;
+    gap: 12px;
+  }
+  &__places {
+    position: relative;
+    width: calc(504 / 1520 * 100%);
+    &::before {
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: calc(488 / 504 * 100%);
+      max-width: 488px;
+      height: 152px;
+      background: linear-gradient(180deg, rgba(56, 16, 103, 0) 0%, #381067 100%);
+    }
+  }
+  &__map {
+    flex: 1;
+  }
+  &__scroll-wrapp {
+    height: 100%;
+    max-height: 600px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--grape);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--pink);
+    }
+  }
+  &__list {
+    width: calc(488 / 500 * 100%);
+    max-width: 488px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}
+
+@-moz-document url-prefix() {
+  .section-place__scroll-wrapp {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink) var(--grape);
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-place {
+    &__content {
+      gap: 10px;
+    }
+    &__places {
+      width: calc(402 / 976 * 100%);
+    }
+    &::before {
+      width: calc(388 / 402 * 100%);
+    }
+    &__scroll-wrapp {
+      max-height: 528px;
+    }
+    &__list {
+      width: calc(388 / 398 * 100%);
+      gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-place {
+    &__map {
+      display: none;
+    }
+    &__places {
+      width: 100%;
+      &::before {
+        display: none;
+      }
+    }
+    &__scroll-wrapp {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    &__list {
+      width: 100%;
+      max-width: 100%;
+      gap: 8px;
+      li { // возможно нужно убрать
+        display: none;
+        &:nth-child(-n+3) {
+          display: block;
+        }
+      }
+    }
+    &__hidden {
+      display: flex;
+      justify-content: center;
+    }
+    &__still-btn {
+      padding: 15px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 171%;
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: var(--white);
+      background-color: var(--pink);
+      gap: 4px;
+      .svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

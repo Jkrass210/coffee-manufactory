@@ -39,8 +39,26 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 710px) {
   .card-why {
-    
+    padding: 24px;
+    min-height: 316px;
+    &__box-top {
+      .svg {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        img {
+          width: 27px;
+          height: 36px;
+        }
+      }
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__desc {
+      font-size: 16px;
+    }
   }
 }

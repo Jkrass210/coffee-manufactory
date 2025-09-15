@@ -1,0 +1,73 @@
+.swiper-news {
+  margin-bottom: 24px;
+  &-btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &-btn {
+    width: 51px;
+    height: 51px;
+    display: flex;
+    border: 1px solid var(--violet);
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1d;
+    transition: border-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      border-color: #1d1d1d;
+    }
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    &.swiper-button-lock {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-news {
+    padding: 0 24px;
+    &-btns {
+      gap: 6px;
+    }
+
+    &-btn {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      svg {
+        width: 20px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .swiper-news {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 710px) {
+  .swiper-news {
+    margin-bottom: 20px;
+    &-btn {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      gap: 4px;
+      svg {
+        width: 16px;
+        height: 10px;
+      }
+    }
+  }
+}

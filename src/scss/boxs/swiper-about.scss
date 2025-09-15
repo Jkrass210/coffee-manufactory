@@ -1,0 +1,76 @@
+.swiper-about {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+  &-btns {
+    padding: 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: calc(912 / 1520 * 100%);
+    position: absolute;
+    bottom: 52px;
+    z-index: 3;
+    gap: 8px;
+  }
+  &-btn {
+    width: 51px;
+    height: 51px;
+    display: flex;
+    border: 1px solid var(--black);
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1d;
+    transition: border-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      border-color: #1d1d1d;
+    }
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-about {
+    &-btns {
+      padding: 0 24px;
+      bottom: 36px;
+      gap: 6px;
+      width: calc(512 / 976 * 100%);
+    }
+    &-btn {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      svg {
+        width: 20px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .swiper-about {
+    &-btns {
+      width: 100%;
+      bottom: 24px;
+    }
+    &-btn {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+      gap: 4px;
+      svg {
+        width: 16px;
+        height: 10px;
+      }
+    }
+  }
+}

@@ -31,3 +31,30 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .section-why {
+    &__list {
+      display: flex;
+      gap: 0;
+
+      li:nth-child(3) {
+        .card-why {
+          background-color: var(--pink);
+        }
+      }
+
+      li:nth-child(4) {
+        .card-why {
+          background-color: var(--black);
+        }
+      }
+    }
+    &__content {
+      margin: 0 -16px;
+    }
+    .swiper-wrapper {
+      padding: 0 16px;
+    }
+  }
+}

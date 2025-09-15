@@ -3,4 +3,46 @@
     height: auto;
     box-sizing: border-box;
   }
+
+  &-pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .swiper-why {
+    &-pagination {
+      padding-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      .swiper-pagination-bullet {
+        margin: 0 !important;
+        opacity: 1;
+        width: 10.6px;
+        min-width: 10.6px;
+        height: 10.6px;
+        background-color: transparent;
+        border: 1.4px solid var(--pink);
+        transition: width 0.4s ease-in-out, border 0.4s ease-in-out, border-radius 0.4s ease-in-out, background-color 0.4s ease-in-out;
+        &.swiper-pagination-bullet-active {
+          position: relative;
+          width: 48px;
+          border: none;
+          border-radius: 100px;
+          background-color: var(--grape);
+          &::after {
+            content: '';
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: var(--pink);
+          }
+        }
+      }
+    }
+  }
 }

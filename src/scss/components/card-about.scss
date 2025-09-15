@@ -1,0 +1,107 @@
+.card-about {
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: row-reverse;
+  &__bottom {
+    padding: 168px 52px 52px;
+    width: calc(912 / 1520 * 100%);
+    background-color: var(--black);
+    background-image: url(../img/card-about/marks.svg);
+    background-repeat: no-repeat;
+    background-position: top 52px left 52px;
+  }
+  &__top {
+    flex: 1;
+    picture {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__box-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  &__desc {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 119%;
+    color: var(--white);
+  }
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 117%;
+    color: var(--white);
+  }
+  &__insert {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--pink);
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-about {
+    min-height: 400px;
+    &__bottom {
+      padding: 134px 24px 37px;
+      width: calc(512 / 976 * 100%);
+      background-position: top 36px left 24px;
+      background-image: url(../img/card-about/marks-1100.svg);
+    }
+    &__desc {
+      font-size: 18px;
+      line-height: 128%;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__insert {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .card-about {
+    flex-direction: column;
+    &__img {
+      max-height: 328px;
+    }
+    &__bottom {
+      width: 100%;
+      min-height: 367px;
+      padding: 84px 24px 24px;
+      background-image: url(../img/card-about/marks-710.svg);
+      background-position: top 24px left 24px;
+    }
+    &__desc {
+      font-size: 16px;
+      line-height: 119%;
+    }
+    &__title {
+      font-size: 18px;
+    }
+    &__insert {
+      font-size: 14px;
+    }
+  }
+}

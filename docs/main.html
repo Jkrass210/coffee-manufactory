@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
-  <link href="css/normalize.min.css?_v=20250912122417" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250912122417" rel="stylesheet">
-  <link href="css/style.css?_v=20250912122417" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250915063201" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250915063201" rel="stylesheet">
+  <link href="css/style.css?_v=20250915063201" rel="stylesheet">
 
   <script>
     window.addEventListener('load', function () {
@@ -15,15 +15,15 @@
     });
   </script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250912122417"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250915063201"></script>
   
-  <script src="js/jquery-3.6.0.min.js?_v=20250912122417" defer></script>
-  <script src="js/jquery.validate.min.js?_v=20250912122417" defer></script>
-  <script src="js/additional-methods.min.js?_v=20250912122417" defer></script>
-  <script src="js/cleave.js?_v=20250912122417" defer></script>
-  <script src="js/swiper-bundle.min.js?_v=20250912122417" defer></script>
-  <script src="js/fslightbox.js?_v=20250912122417" defer></script>
-  <script type="module" src="js/main.js?_v=20250912122417"></script>
+  <script src="js/jquery-3.6.0.min.js?_v=20250915063201" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250915063201" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250915063201" defer></script>
+  <script src="js/cleave.js?_v=20250915063201" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250915063201" defer></script>
+  <script src="js/fslightbox.js?_v=20250915063201" defer></script>
+  <script type="module" src="js/main.js?_v=20250915063201"></script>
 </head>
 
 <body>
@@ -54,6 +54,27 @@
         </div>
 
         <nav class="nav burger-menu">
+          <div class="nav__hidden mobile-hiddem-menu">
+            <div class="mobile-hiddem-menu__line-top">
+              <div class="logo">
+                <a href="/">
+                  <img src="img/logo/logo-header.svg" alt="svg">
+                </a>
+              </div>
+              <div class="mobile-hiddem-menu__box-close">
+                <button class="mobile-hiddem-menu__close close btn-reset">
+                  <svg width="46" height="25" viewBox="0 0 46 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.6324 4.93243C28.5287 5.67301 46.647 6.03535 44.368 6.65261C43.2164 6.96453 30.8859 6.56293 24.1862 6.37523C16.7373 6.16653 9.37502 6.63774 1.9864 6.91749C1.86994 6.9219 0.78338 6.90216 1.60121 6.93684C3.31524 7.00953 5.01805 7.17458 6.73394 7.2052C14.7935 7.34903 22.7332 5.53134 30.7237 5.18707C34.4463 5.02668 38.7856 4.79438 42.3554 5.24836" stroke="white" stroke-width="0.700016" stroke-linecap="round"></path>
+                    <path d="M25.3588 16.7137C17.4625 17.4543 -0.655786 17.8166 1.62319 18.4339C2.77484 18.7458 15.1053 18.3442 21.8051 18.1565C29.2539 17.9478 36.6162 18.419 44.0048 18.6987C44.1213 18.7032 45.2078 18.6834 44.39 18.7181C42.676 18.7908 40.9732 18.9558 39.2573 18.9865C31.1977 19.1303 23.258 17.3126 15.2675 16.9683C11.5449 16.8079 7.20558 16.5756 3.63578 17.0296" stroke="white" stroke-width="0.700016" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-hiddem-menu__line-btns"></div>
+
+          </div>
+
           <ul class="nav__list list-reset">
             <li>
               <a class="nav__link" href="#">
@@ -147,17 +168,52 @@
               </a>
             </li>
           </ul>
+
+          <div class="nav__hidden mobile-hiddem-menu-bottom">
+            <a href="tel:+78127673905" class="tel-link">+7 812 767 39 05</a>
+            <div class="mobile-hiddem-menu-bottom__group-links">
+              <a href="#">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <use xlink:href="img/sprite.svg#wa"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <use xlink:href="img/sprite.svg#tg"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <use xlink:href="img/sprite.svg#mail"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
         </nav>
 
         <div class="brn-group">
-          <a href="" class="brn-group__link search"></a>
-          <a href="" class="brn-group__link logIn"></a>
-          <a href="" class="brn-group__link like">
+          <a href="#" class="brn-group__link search">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </a>
+          <a href="#" class="brn-group__link logIn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#logIn"></use>
+            </svg>
+          </a>
+          <a href="#" class="brn-group__link like">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <use xlink:href="img/sprite.svg#like"></use>
+            </svg>
             <span class="counter">
               1
             </span>
           </a>
-          <a href="" class="brn-group__link basket">
+          <a href="#" class="brn-group__link basket">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use xlink:href="img/sprite.svg#basket"></use>
+            </svg>
             <span class="counter">
               3
             </span>
@@ -180,6 +236,112 @@
   </div>
 </header>
   <main class="main">
+    <section class="section-hero section">
+  <div class="section-hero__top">
+    <div class="section-hero__box-swiper">
+      <div class="swiper-hero swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__container container">
+                <div class="card-hero__info">
+                  <div class="card-hero__info-top">
+                    <img src="img/hero/text.svg" alt="svg">
+                    <p class="card-hero__desc">
+                      Откройте для себя мир контркультурной обжарки из Санкт-Петербурга
+                    </p>
+                  </div>
+                  <div class="card-hero__info-bottom">
+                    <button class="card-hero__btn btn-reset">
+                      Выбрать кофе
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="card-hero__img" src="img/hero/1.jpg" alt="img"></picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__container container">
+                <div class="card-hero__info">
+                  <div class="card-hero__info-top">
+                    <img src="img/hero/text.svg" alt="svg">
+                    <p class="card-hero__desc">
+                      Откройте для себя мир контркультурной обжарки из Санкт-Петербурга
+                    </p>
+                  </div>
+                  <div class="card-hero__info-bottom">
+                    <button class="card-hero__btn btn-reset">
+                      Выбрать кофе
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="card-hero__img" src="img/hero/1.jpg" alt="img"></picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__container container">
+                <div class="card-hero__info">
+                  <div class="card-hero__info-top">
+                    <img src="img/hero/text.svg" alt="svg">
+                    <p class="card-hero__desc">
+                      Откройте для себя мир контркультурной обжарки из Санкт-Петербурга
+                    </p>
+                  </div>
+                  <div class="card-hero__info-bottom">
+                    <button class="card-hero__btn btn-reset">
+                      Выбрать кофе
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="card-hero__img" src="img/hero/1.jpg" alt="img"></picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-hero-pagination"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section-hero__bottom">
+    <div class="section-hero__container container">
+      <div class="section-hero__separator">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <ul class="section-hero__list list-reset">
+        <li>
+          <a href="#" class="section-hero__link-bottom">
+            <span>Школа</span>
+            <span>бариста</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="section-hero__link-bottom">
+            <span>Кофмемашина</span>
+            <span>в аренду</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="section-hero__link-bottom">
+            <span>контрактная</span>
+            <span>обжарка</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="section-hero__link-bottom">
+            <span>кофе</span>
+            <span>оптом</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
     <section class="section-shop">
   <div class="section-shop__content">
     <div class="section-shop__container container">
@@ -297,6 +459,277 @@
     </div>
   </div>
 
+</section>
+    <section class="section-services section">
+  <div class="section-services__container container">
+    <h2 class="section-title">
+      Чем можем помочь?
+    </h2>
+    <ul class="section-services__list list-reset">
+      <li>
+        <div class="card-services">
+          <div class="card-services__top">
+            <picture>
+              <source srcset="img/services/1-1000.svg" media="(max-width: 1000px)">
+              <source srcset="img/services/1-1100.svg" media="(max-width: 1200px)">
+              <img class="card-services__img-svg" src="img/services/1.svg" alt="svg">
+            </picture>
+            <picture><source srcset="img/services/1.webp" type="image/webp"><img class="card-services__img" src="img/services/1.jpg" alt="img"></picture>
+          </div>
+          <div class="card-services__bottom">
+            <a href="#" class="card-services__link-title">
+              <h3 class="title">
+                Кофе оптом
+              </h3>
+            </a>
+            <div class="card-services__box-info">
+              <div class="card-services__desc">
+                <p class="main-desc">
+                  Бери больше, неси дальше, плати меньше!
+                </p>
+                <p class="desc">
+                  Хорошего кофе должно быть много, особенно в вашем офисе или кофейне. Вкус, цены и сервис вас приятно удивят.
+                </p>
+              </div>
+
+              <div class="card-services__box-btn">
+                <a href="#" class="card-services__link">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card-services">
+          <div class="card-services__top">
+            <picture>
+              <source srcset="img/services/2-1000.svg" media="(max-width: 1000px)">
+              <source srcset="img/services/2-1100.svg" media="(max-width: 1200px)">
+              <img class="card-services__img-svg" src="img/services/2.svg" alt="svg">
+            </picture>
+            <picture><source srcset="img/services/2.webp" type="image/webp"><img class="card-services__img" src="img/services/2.jpg" alt="img"></picture>
+          </div>
+          <div class="card-services__bottom">
+            <a href="#" class="card-services__link-title">
+              <h3 class="title">
+                Контрактная обжарка
+              </h3>
+            </a>
+            <div class="card-services__box-info">
+              <div class="card-services__desc">
+                <p class="main-desc">
+                  Любой каприз за ваши деньги
+                </p>
+                <p class="desc">
+                  Сделаем вкусно и быстро, подскажем, как лучше, или просто не будем навязывать советы, если вы сами всё знаете.
+                </p>
+              </div>
+
+              <div class="card-services__box-btn">
+                <a href="#" class="card-services__link">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card-services">
+          <div class="card-services__top">
+            <picture>
+              <source srcset="img/services/3-1000.svg" media="(max-width: 1000px)">
+              <source srcset="img/services/3-1100.svg" media="(max-width: 1200px)">
+              <img class="card-services__img-svg" src="img/services/3.svg" alt="svg">
+            </picture>
+            <picture><source srcset="img/services/3.webp" type="image/webp"><img class="card-services__img" src="img/services/3.jpg" alt="img"></picture>
+          </div>
+          <div class="card-services__bottom">
+            <a href="#" class="card-services__link-title">
+              <h3 class="title">
+                Школа бариста
+              </h3>
+            </a>
+            <div class="card-services__box-info">
+              <div class="card-services__desc">
+                <p class="main-desc">
+                  Научим, и покажем  где чё по чём
+                </p>
+                <p class="desc">
+                  Обучим собственников и персонал искусству приготовления кофе, а для домашних гурманов раскроем все тонкости
+                </p>
+              </div>
+
+              <div class="card-services__box-btn">
+                <a href="#" class="card-services__link">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card-services">
+          <div class="card-services__top">
+            <picture>
+              <source srcset="img/services/4-1000.svg" media="(max-width: 1000px)">
+              <source srcset="img/services/4-1100.svg" media="(max-width: 1200px)">
+              <img class="card-services__img-svg" src="img/services/4.svg" alt="svg">
+            </picture>
+            <picture><source srcset="img/services/4.webp" type="image/webp"><img class="card-services__img" src="img/services/4.jpg" alt="img"></picture>
+          </div>
+          <div class="card-services__bottom">
+            <a href="#" class="card-services__link-title">
+              <h3 class="title">
+                Кофемашина в аренду
+              </h3>
+            </a>
+            <div class="card-services__box-info">
+              <div class="card-services__desc">
+                <p class="main-desc">
+                  Зачем своё, когда есть чужое?
+                </p>
+                <p class="desc">
+                  Закажите аренду кофемашины прямо сейчас и наслаждайтесь идеальным кофе!
+                </p>
+              </div>
+
+              <div class="card-services__box-btn">
+                <a href="#" class="card-services__link">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+    <section class="section-about section">
+  <div class="section-about__container container">
+    <h2 class="section-title">
+      О нас
+    </h2>
+    <div class="section-about__box-swiper">
+      <div class="swiper-about swiper">
+        <ul class="swiper-wrapper list-reset">
+          <li class="swiper-slide">
+            <div class="card-about">
+              <div class="card-about__top">
+                <picture><source srcset="img/card-about/1.webp" type="image/webp"><img class="card-about__img" src="img/card-about/1.jpg" alt="img"></picture>
+              </div>
+              <div class="card-about__bottom">
+                <div class="card-about__box-info">
+                  <p class="card-about__desc">
+                    Мы — контркультурные обжарщики из Санкт-Петербурга. Ещё в далёком 2016 году мы решили, что будем
+                    делать не просто «не как все», а будем делать «хорошо». Именно в этой позиции честности и открытости
+                    с вами заключается наша контркультурность.
+                  </p>
+                  <div class="card-about__title-wrapper">
+                    <h3 class="card-about__title">
+                      Обжарщики
+                    </h3>
+                    <p class="card-about__insert">
+                      Мануфактура кофе
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-about">
+              <div class="card-about__top">
+                <picture><source srcset="img/card-about/2.webp" type="image/webp"><img class="card-about__img" src="img/card-about/2.jpg" alt="img"></picture>
+              </div>
+              <div class="card-about__bottom">
+                <div class="card-about__box-info">
+                  <p class="card-about__desc">
+                    Контркультурность — наша ценность и преимущество. Мы убеждены: чтобы быть не такими как все,
+                    достаточно быть собой. Когда мы обжариваем кофе, то проживаем каждый свою уникальную историю в этом
+                    деле.
+                  </p>
+                  <div class="card-about__title-wrapper">
+                    <h3 class="card-about__title">
+                      Обжарщики
+                    </h3>
+                    <p class="card-about__insert">
+                      Мануфактура кофе
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-about">
+              <div class="card-about__top">
+                <picture><source srcset="img/card-about/3.webp" type="image/webp"><img class="card-about__img" src="img/card-about/3.jpg" alt="img"></picture>
+              </div>
+              <div class="card-about__bottom">
+                <div class="card-about__box-info">
+                  <p class="card-about__desc">
+                    Наша основная задача — быть честными с нашими потребителями, и эта честность раскрывается в каждом
+                    зёрнышке. Мы не боимся экспериментов, не боимся высоких биржевых показателей и колебаний курсов
+                    валют. Именно поэтому, невзирая ни на что, мы методично идём к тому, чтобы помочь вам найти тот
+                    самый кофе, который вы запомните на всю жизнь.
+                  </p>
+                  <div class="card-about__title-wrapper">
+                    <h3 class="card-about__title">
+                      Обжарщики
+                    </h3>
+                    <p class="card-about__insert">
+                      Мануфактура кофе
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-about">
+              <div class="card-about__top">
+                <picture><source srcset="img/card-about/4.webp" type="image/webp"><img class="card-about__img" src="img/card-about/4.jpg" alt="img"></picture>
+              </div>
+              <div class="card-about__bottom">
+                <div class="card-about__box-info">
+                  <p class="card-about__desc">
+                    Мы — контркультурные обжарщики из Санкт-Петербурга. Ещё в далёком 2016 году мы решили, что будем
+                    делать не просто «не как все», а будем делать «хорошо». Именно в этой позиции честности и открытости
+                    с вами заключается наша контркультурность.
+                  </p>
+                  <div class="card-about__title-wrapper">
+                    <h3 class="card-about__title">
+                      Обжарщики
+                    </h3>
+                    <p class="card-about__insert">
+                      Мануфактура кофе
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-about-btns">
+          <button class="swiper-about-btn --prev btn-reset">
+            <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+              <use xlink:href="img/sprite.svg#swiperAboutBtn1"></use>
+            </svg>
+          </button>
+          <button class="swiper-about-btn --next btn-reset">
+            <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+              <use xlink:href="img/sprite.svg#swiperAboutBtn2"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
     <section class="section-why section">
   <div class="section-why__container container">
@@ -422,6 +855,297 @@
     </div>
   </div>
 </section>
+    <section class="section-map section">
+  <div class="section-map__container container">
+    <div class="section-map__content" style="background-image: url(img/map/map.svg);">
+      <div class="section-map__line-title">
+        <h2 class="section-map__title">
+          Сегодня обжарим, а завтра отправим в любую точку РФ
+        </h2>
+      </div>
+
+      <div class="section-map__line-img">
+        <img class="section-map__img sdek" src="img/section-map/1.svg" alt="svg">
+        <img class="section-map__img post" src="img/section-map/2.svg" alt="svg">
+      </div>
+
+      <div class="section-map__box-btn">
+        <a href="#" class="section-map__btn-choose btn-reset">
+          <span>Выбрать кофе</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="section-news section">
+  <div class="section-news__container container">
+    <h2 class="section-title">Журнал о кофе</h2>
+    <div class="section-news__box-swiper">
+      <div class="swiper-news swiper">
+        <ul class="swiper-wrapper list-reset">
+          <li class="swiper-slide">
+            <div class="card-news">
+              <p class="card-news__time"><time datetime="18.08.2025">18.08.2025</time></p>
+              <a href="#" class="card-news__link">
+                <span class="card-news__box-img">
+                  <picture><source srcset="img/card-news/1.webp" type="image/webp"><img class="card-news__img" src="img/card-news/1.jpg" alt="img"></picture>
+                </span>
+
+                <h3 class="card-news__title">
+                  Рабочие комбинезоны от SNAKEJAWS OVERALLS
+                </h3>
+              </a>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-news">
+              <p class="card-news__time"><time datetime="18.08.2025">18.08.2025</time></p>
+              <a href="#" class="card-news__link">
+                <span class="card-news__box-img">
+                  <picture><source srcset="img/card-news/2.webp" type="image/webp"><img class="card-news__img" src="img/card-news/2.jpg" alt="img"></picture>
+                </span>
+
+                <h3 class="card-news__title">
+                  Как жарить кофе под молочко?
+                </h3>
+              </a>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-news">
+              <p class="card-news__time"><time datetime="18.08.2025">18.08.2025</time></p>
+              <a href="#" class="card-news__link">
+                <span class="card-news__box-img">
+                  <picture><source srcset="img/card-news/3.webp" type="image/webp"><img class="card-news__img" src="img/card-news/3.jpg" alt="img"></picture>
+                </span>
+
+                <h3 class="card-news__title">
+                  Новый проект: картхолдер из переработанных кофейных пакетов пакетов пакетов
+                </h3>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-news__btn-group">
+        <a href="#" class="section-news__link">
+          Все статьи
+        </a>
+
+        <div class="swiper-news-btns">
+          <button class="swiper-news-btn --prev btn-reset">
+            <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+              <use xlink:href="img/sprite.svg#swiperAboutBtn1"></use>
+            </svg>
+          </button>
+          <button class="swiper-news-btn --next btn-reset">
+            <svg width="26" height="12" viewBox="0 0 26 12" fill="none">
+              <use xlink:href="img/sprite.svg#swiperAboutBtn2"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="section-place section">
+  <div class="section-place__container container">
+    <div class="section-place__line-title">
+      <h2 class="section-title-2">
+        Где попробовать наше кофе?
+      </h2>
+    </div>
+
+    <div class="section-place__content">
+      <div class="section-place__places">
+
+        <div class="section-place__scroll-wrapp">
+          <ul class="section-place__list list-reset">
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-place">
+                <div class="card-place__top">
+                  <h3 class="card-place__title">
+                    Кофейня «Pitcher»
+                  </h3>
+                  <p class="card-place__desc">
+                    г. Санкт-Петербург, ул. Марата 2
+                  </p>
+                </div>
+                <div class="card-place__bottom">
+                  <a href="#" class="card-place__link">
+                    Как добраться?
+                  </a>
+                </div>
+              </div>
+            </li>
+            <!--в мобильной версии оставляю винимыми только 3 элемента списка, скрываю с помощью стилей, возможно нужно убрать????????-->
+          </ul>
+        </div>
+
+        <div class="section-place__hidden">
+          <a href="#" class="section-place__still-btn">
+            <span class="text">
+              Показать еще
+            </span>
+            <span class="svg">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+      <div class="section-place__map" id="map"></div>
+
+      <script>
+        ymaps.ready(init);
+
+        function init() {
+          const map = new ymaps.Map("map", {
+            center: [59.931253, 30.355830],
+            zoom: 11
+          });
+
+          const placemark1 = new ymaps.Placemark(
+            [59.931247, 30.355825],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/1.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark2 = new ymaps.Placemark(
+            [59.931111, 30.355700],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/2.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark3 = new ymaps.Placemark(
+            [59.931400, 30.355760],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/3.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark4 = new ymaps.Placemark(
+            [59.931500, 30.355900],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/4.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          const placemark5 = new ymaps.Placemark(
+            [59.931600, 30.356000],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/map-icon/5.svg',
+              iconImageSize: [55, 55],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          map.geoObjects.add(placemark1);
+          map.geoObjects.add(placemark2);
+          map.geoObjects.add(placemark3);
+          map.geoObjects.add(placemark4);
+          map.geoObjects.add(placemark5);
+
+          map.setBounds(map.geoObjects.getBounds(), {
+            checkZoomRange: true,
+            zoomMargin: 50
+          });
+
+        }
+      </script>
+    </div>
+
+  </div>
+</section>
+
   </main>
   <footer class="footer" id="footer">
   <div class="footer__container container">

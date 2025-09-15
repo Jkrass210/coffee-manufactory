@@ -105,10 +105,24 @@ body {
 }
 
 .section-title {
+  max-width: max-content;
   margin-bottom: 44px;
   font-family: var(--second-family);
   font-weight: 600;
   font-size: 44px;
+  transform: scaleX(1.2);
+  transform-origin: left;
+  color: var(--white);
+}
+
+.section-title-2 {
+  max-width: max-content;
+  margin-bottom: 56px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 44px;
+  transform: scaleX(1.2);
+  transform-origin: center;
   color: var(--white);
 }
 
@@ -119,6 +133,11 @@ body {
 
   .section-title {
     font-size: 36px;
+  }
+
+  .section-title-2{
+    font-size: 36px;
+    margin-bottom: 52px;
   }
 }
 
@@ -136,5 +155,11 @@ body {
   .section-title {
     margin-bottom: 36px;
     font-size: 24px;
+  }
+  .section-title-2{
+    font-size: 24px;
+    margin-bottom: 36px;
+    max-width: 250px;
+    text-align: center;
   }
 }
