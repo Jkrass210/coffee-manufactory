@@ -150,8 +150,11 @@
     &__bottom {
       padding: 28px;
     }
+    &__box-info {
+      gap: 24px;
+    }
     &__desc {
-      gap: 10px;
+      gap: 5px;
       p {
         font-size: 16px;
         &.main-desc {
@@ -177,12 +180,14 @@
     }
     &__bottom {
       padding: 24px;
+      min-height: 207px;
     }
     &__box-info {
-      gap: 10px;
+      gap: 19px;
     }
     &__desc {
       font-size: 18px;
+      gap: 11px;
       p {
         font-size: 14px;
       }
@@ -191,6 +196,8 @@
       }
       p.desc {
         font-size: 14px;
+        -webkit-line-clamp: 4;
+        max-height: 4.8em;
       }
     }
     &__link {

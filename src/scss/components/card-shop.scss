@@ -58,7 +58,7 @@
 @media (max-width: 1400px) {
   .card-shop {
     &__link {
-      padding: 28px;
+      padding: 28px 28px 20px;
     }
   }
 }
@@ -100,7 +100,7 @@
       font-size: 22px;
     }
     &__link {
-      background-size: 152px 94px;
+      background-size: 152px 94px, cover;
     }
   }
 }

@@ -16,6 +16,10 @@ export function initSwiperHero(swiperClass = 'swiper-hero', paginationClass = 's
 
     // Инициализируем Swiper
     new Swiper(container, {
+      autoplay: {
+        delay: 8000, // интервал в миллисекундах (3 секунды)
+        disableOnInteraction: false, // продолжать автопрокрутку после взаимодействия пользователя
+      },
       effect: 'fade', // Включаем fade эффект
       fadeEffect: {
         crossFade: true // Одновременное перекрытие слайдов

@@ -114,7 +114,13 @@
     }
 
     &__desc {
+      text-align: center;
       font-size: 16px;
+    }
+
+    &__info-bottom {
+      justify-content: center;
+      width: 100%;
     }
 
     &__btn {

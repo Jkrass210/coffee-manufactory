@@ -23,6 +23,10 @@ export function initSwiperWhy() {
         // Инициализируем Swiper
         try {
             new Swiper(container, {
+                autoplay: {
+                    delay: 8000,
+                    disableOnInteraction: false,
+                },
                 slidesPerView: 1.1,
                 spaceBetween: 8,
                 pagination: {

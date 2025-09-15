@@ -62,7 +62,7 @@
         }
       }
       .bottom {
-        padding: 156px 0;
+        padding: 166px 0 154px;
         &::before {
           inset: -164px 0;
           background-image: url(../img/card-advanteres/coffee_beans-1100.png);
@@ -97,8 +97,14 @@
 @media (max-width: 710px) {
   .section-shop {
     &__content {
+      .top__list {
+        gap: 11px;
+      }
       .bottom {
-        padding: 124px 0;
+        padding: 139px 0 124px;
+        &__list {
+          gap: 46px;
+        }
       }
     }
   }

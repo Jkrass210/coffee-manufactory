@@ -6,19 +6,19 @@
     gap: 8px;
   }
   &-btn {
-    width: 51px;
-    height: 51px;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
     display: flex;
-    border: 1px solid var(--violet);
     align-items: center;
     justify-content: center;
     background-color: #1d1d1d;
-    transition: border-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
     &:focus,&:focus-visible {
       outline: none;
     }
     &:focus-visible,&:hover,&:active {
-      border-color: #1d1d1d;
+      background-color: var(--pink);
     }
     &.swiper-button-disabled {
       pointer-events: none;
@@ -33,15 +33,13 @@
 
 @media (max-width: 1100px) {
   .swiper-news {
+    margin-bottom: 50px;
     padding: 0 24px;
     &-btns {
       gap: 6px;
     }
 
     &-btn {
-      width: 40px;
-      min-width: 40px;
-      height: 40px;
       svg {
         width: 20px;
         height: 10px;
@@ -60,12 +58,12 @@
   .swiper-news {
     margin-bottom: 20px;
     &-btn {
-      width: 36px;
-      min-width: 36px;
-      height: 36px;
-      gap: 4px;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      gap: 6px;
       svg {
-        width: 16px;
+        width: 20px;
         height: 10px;
       }
     }

@@ -6,6 +6,7 @@ import { initSwiperHero } from './module/initSwiperHero.js';
 import { initSwiperAbout } from './module/initSwiperAbout.js';
 import { initSwiperNews } from './module/initSwiperNews.js';
 import { initMoveElements } from './module/initMoveElements.js';
+import { initBoxMenuColumns } from './module/initBoxMenuColumns.js';
 
 testWebP(function (support) {
   if (support == true) {
@@ -47,4 +48,8 @@ if (document.querySelector('.header__container .brn-group') && document.querySel
     breakpoint: 1000 // опционально, по умолчанию 1000
   };
   initMoveElements(moveConfig);
+}
+
+if (document.querySelectorAll('.box-menu__column').length) {
+  initBoxMenuColumns();
 }
