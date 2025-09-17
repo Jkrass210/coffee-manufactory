@@ -7,6 +7,10 @@ import { initSwiperAbout } from './module/initSwiperAbout.js';
 import { initSwiperNews } from './module/initSwiperNews.js';
 import { initMoveElements } from './module/initMoveElements.js';
 import { initBoxMenuColumns } from './module/initBoxMenuColumns.js';
+import { initCookiesModal } from './module/initCookiesModal.js';
+import { initDropDown1 } from './module/initDropDown1.js';
+import DropSearch from './module/initDropSearch.js';
+
 
 testWebP(function (support) {
   if (support == true) {
@@ -52,4 +56,16 @@ if (document.querySelector('.header__container .brn-group') && document.querySel
 
 if (document.querySelectorAll('.box-menu__column').length) {
   initBoxMenuColumns();
+}
+
+if (document.querySelector('.box-cookies')) {
+  initCookiesModal()
+}
+
+if (document.querySelectorAll('.dropDown1')) {
+  initDropDown1();
+}
+
+if (document.querySelector('.dropSearch')) {
+  const dropSearch = new DropSearch('dropSearch', 'dropSearch__btn-open', 'dropSearch__box');
 }

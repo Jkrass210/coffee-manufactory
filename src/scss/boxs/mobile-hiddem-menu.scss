@@ -58,4 +58,22 @@
       }
     }
   }
+
+  .dropSearch {
+    margin-bottom: 20px;
+    &__btn-open {
+      display: none;
+    }
+    &__box {
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      padding: 0;
+      box-shadow: none;
+    }
+    &__wrapper {
+      flex-direction: row-reverse;
+    }
+  }
 }

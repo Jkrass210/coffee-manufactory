@@ -33,6 +33,14 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .section-why {
+    &__list {
+      gap: 24px;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .section-why {
     &__list {

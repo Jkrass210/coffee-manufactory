@@ -1,0 +1,67 @@
+.dropSearch {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  &__btn-open {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--pink);
+    }
+    &.active {
+      color: var(--pink);
+    }
+  }
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    padding: 10px;
+    background-color: var(--violet);
+    transform: translate(calc(-100% + 36px), -50%);
+    box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+    transition: opacity 0.4s ease-in, visibility 0.4s ease-in-out;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn-submit {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink);
+  }
+  &__input {
+    border: none;
+    background-color: var(--grape);
+    padding: 5px;
+    border-radius: 3px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+}

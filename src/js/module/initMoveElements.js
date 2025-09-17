@@ -29,15 +29,16 @@ export function initMoveElements(selectors) {
 
     function moveToTarget() {
         if (!elementsInTarget) {
-            // Клонируем элементы для сохранения оригиналов
+            // Сохраняем оригинальные элементы перед перемещением
             const elementsToMove = Array.from(sourceElement.children);
             
+            // Очищаем целевой контейнер перед добавлением новых элементов
+            targetElement.innerHTML = '';
+            
             elementsToMove.forEach(element => {
-                targetElement.appendChild(element.cloneNode(true));
+                targetElement.appendChild(element);
             });
             
-            // Очищаем исходный контейнер
-            sourceElement.innerHTML = '';
             elementsInTarget = true;
         }
     }
@@ -47,12 +48,13 @@ export function initMoveElements(selectors) {
             // Возвращаем элементы обратно
             const elementsToReturn = Array.from(targetElement.children);
             
+            // Очищаем исходный контейнер перед добавлением элементов
+            sourceElement.innerHTML = '';
+            
             elementsToReturn.forEach(element => {
-                sourceElement.appendChild(element.cloneNode(true));
+                sourceElement.appendChild(element);
             });
             
-            // Очищаем целевой контейнер
-            targetElement.innerHTML = '';
             elementsInTarget = false;
         }
     }
@@ -78,7 +80,7 @@ export function initMoveElements(selectors) {
     }
 
     function init() {
-        // Начальная проверка и перемещение
+        // Начальная проверка и перемещение при загрузке
         handleMove();
 
         const debouncedHandleMove = debounce(handleMove, 250);
@@ -93,5 +95,15 @@ export function initMoveElements(selectors) {
         };
     }
 
+    // Вызываем init() и возвращаем функцию для очистки
     return init();
+}
+
+// Альтернативный вариант - если нужно гарантировать выполнение после полной загрузки DOM
+export function initMoveElementsOnLoad(selectors) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initMoveElements(selectors));
+    } else {
+        return initMoveElements(selectors);
+    }
 }

@@ -99,7 +99,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--white);
-    transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 
     &:focus,
     &:focus-visible {
@@ -130,15 +130,39 @@
 @media (max-width: 1000px) {
   .dropDown1 {
     &__main-link {
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:has(+ .dropDown1__box-list:hover) {
+        svg {
+          transform: none;
+        }
+      }
 
       &:focus-visible,
       &:hover,
       &:active {
-        &+.dropDown1__box-list {
-          display: block;
-        }
 
+        svg {
+          //transform: none;
+        }
       }
+
+    }
+
+    &__link {
+      padding: 12px;
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        color: var(--pink);
+        background-color: transparent;
+      }
+
     }
 
     &__box-list {
@@ -150,6 +174,10 @@
       z-index: 1;
       transform: none;
       background-color: transparent;
+
+      &.active {
+        display: block;
+      }
 
       &::before {
         display: none;

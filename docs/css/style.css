@@ -694,8 +694,8 @@ body {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--white);
-  -webkit-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
 .dropDown1__link:focus,
@@ -1366,8 +1366,8 @@ body {
   height: 100%;
   opacity: 0;
   background-color: var(--pink);
-  -webkit-transition: width 8s ease, opacity 0.3s ease;
-  transition: width 8s ease, opacity 0.3s ease;
+  -webkit-transition: width 8s linear, opacity 0.3s ease;
+  transition: width 8s linear, opacity 0.3s ease;
 }
 
 .swiper-hero-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -1392,6 +1392,30 @@ body {
 .swiper-hero-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   width: 100%;
   opacity: 1;
+  -webkit-animation: expandWidth 8s linear forwards;
+          animation: expandWidth 8s linear forwards;
+  -webkit-transition: width 8s linear, opacity 0.3s ease;
+  transition: width 8s linear, opacity 0.3s ease;
+}
+
+@-webkit-keyframes expandWidth {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 .card-hero {
@@ -2275,7 +2299,35 @@ body {
   outline: none;
 }
 
+.mobile-hiddem-menu .dropSearch {
+  margin-bottom: 20px;
+}
+
+.mobile-hiddem-menu .dropSearch__btn-open {
+  display: none;
+}
+
+.mobile-hiddem-menu .dropSearch__box {
+  position: static;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.mobile-hiddem-menu .dropSearch__wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .box-cookies {
+  display: none;
   pointer-events: none;
   position: fixed;
   z-index: 10;
@@ -2377,6 +2429,113 @@ body {
 
 .box-cookies__btn:focus,
 .box-cookies__btn:focus-visible {
+  outline: none;
+}
+
+.dropSearch {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dropSearch__btn-open {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white);
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.dropSearch__btn-open:focus,
+.dropSearch__btn-open:focus-visible {
+  outline: none;
+}
+
+.dropSearch__btn-open:focus-visible,
+.dropSearch__btn-open:hover,
+.dropSearch__btn-open:active {
+  color: var(--pink);
+}
+
+.dropSearch__btn-open.active {
+  color: var(--pink);
+}
+
+.dropSearch__box {
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  padding: 10px;
+  background-color: var(--violet);
+  -webkit-transform: translate(calc(-100% + 36px), -50%);
+      -ms-transform: translate(calc(-100% + 36px), -50%);
+          transform: translate(calc(-100% + 36px), -50%);
+  -webkit-box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+          box-shadow: 0 0 16px 0 rgba(9, 8, 28, 0.1);
+  -webkit-transition: opacity 0.4s ease-in, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in, visibility 0.4s ease-in-out;
+}
+
+.dropSearch__box.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropSearch__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropSearch__btn-submit {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--pink);
+}
+
+.dropSearch__input {
+  border: none;
+  background-color: var(--grape);
+  padding: 5px;
+  border-radius: 3px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--white);
+}
+
+.dropSearch__input:focus,
+.dropSearch__input:focus-visible {
   outline: none;
 }
 
@@ -2778,6 +2937,10 @@ body {
     font-size: 28px;
   }
 
+  .section-why__list {
+    gap: 24px;
+  }
+
   .section-map__content {
     min-height: 531px;
     padding-bottom: 116px;
@@ -3130,10 +3293,27 @@ body {
     display: none;
   }
 
-  .dropDown1__main-link:focus-visible + .dropDown1__box-list,
-  .dropDown1__main-link:hover + .dropDown1__box-list,
-  .dropDown1__main-link:active + .dropDown1__box-list {
-    display: block;
+  .dropDown1__main-link.active svg {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  .dropDown1__main-link:has(+ .dropDown1__box-list:hover) svg {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .dropDown1__link {
+    padding: 12px;
+  }
+
+  .dropDown1__link:focus-visible,
+  .dropDown1__link:hover,
+  .dropDown1__link:active {
+    color: var(--pink);
+    background-color: transparent;
   }
 
   .dropDown1__box-list {
@@ -3147,6 +3327,10 @@ body {
         -ms-transform: none;
             transform: none;
     background-color: transparent;
+  }
+
+  .dropDown1__box-list.active {
+    display: block;
   }
 
   .dropDown1__box-list::before {
@@ -3262,6 +3446,10 @@ body {
   .swiper-why-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     width: 100%;
     opacity: 1;
+    -webkit-animation: expandWidth 8s linear forwards;
+            animation: expandWidth 8s linear forwards;
+    -webkit-transition: width 8s linear, opacity 0.3s ease;
+    transition: width 8s linear, opacity 0.3s ease;
   }
 
   .section-map__title {
