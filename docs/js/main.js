@@ -45,9 +45,9 @@ if (document.querySelectorAll('.swiper-news').length) {
   initSwiperNews()
 }
 
-if (document.querySelector('.header__container .brn-group') && document.querySelector('.mobile-hiddem-menu__line-btns')) {
+if (document.querySelector('.x2_j_header__container .brn-group') && document.querySelector('.mobile-hiddem-menu__line-btns')) {
   const moveConfig = {
-    sourceSelector: '.header__container .brn-group',
+    sourceSelector: '.x2_j_header__container .brn-group',
     targetSelector: '.mobile-hiddem-menu__line-btns',
     breakpoint: 1000 // опционально, по умолчанию 1000
   };
