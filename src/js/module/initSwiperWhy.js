@@ -27,6 +27,7 @@ export function initSwiperWhy() {
                     delay: 8000,
                     disableOnInteraction: false,
                 },
+                loop: true,
                 slidesPerView: 1.1,
                 spaceBetween: 8,
                 pagination: {

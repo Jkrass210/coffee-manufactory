@@ -47,7 +47,7 @@
       display: flex;
       gap: 0;
 
-      li:nth-child(3) {
+      /*li:nth-child(3) {
         .card-why {
           background-color: var(--pink);
         }
@@ -56,6 +56,29 @@
       li:nth-child(4) {
         .card-why {
           background-color: var(--black);
+        }
+      }*/
+
+      li {
+        .card-why {
+          &.card-why-1 {
+            background-color: var(--pink) !important;
+          }
+          &.card-why-2 {
+            background-color: var(--black) !important;
+          }
+          &.card-why-3 {
+            background-color: var(--pink) !important;
+          }
+          &.card-why-4 {
+            background-color: var(--black) !important;
+          }
+          &.card-why-5 {
+            background-color: var(--pink) !important;
+          }
+          &.card-why-6 {
+            background-color: var(--black) !important;
+          }
         }
       }
     }

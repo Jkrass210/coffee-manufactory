@@ -1,0 +1,29 @@
+.textarea-type-10 {
+  resize: none;
+  padding: 20px;
+  border: 1px solid var(--gray-30, #D2D2D2);
+  background-color: var(--white);
+  color: var(--black, #141414);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  min-height: 288px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 1000px) {
+    padding: 16px;
+    min-height: 244px;
+    font-size: 16px;
+  }
+  &::placeholder {
+    color: rgba(20, 20, 20, 0.5);
+  }
+  &:focus, &:focus-visible {
+    outline: none;
+  }
+}

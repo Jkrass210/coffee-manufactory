@@ -1,0 +1,51 @@
+.swiper-modal-reviews-product {
+  .swiper-slide {
+    box-sizing: border-box;
+  }
+  &__line-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 8px;
+  }
+
+  &__group-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .swiper-student-reviews__btn {
+    background-color: #F8F4F3;
+
+    @media (max-width: 710px) {
+      width: 52px;
+      height: 52px;
+    }
+
+    @media (min-width: 1001px) {
+
+      &:focus-visible,
+      &:hover {
+        background-color: var(--violet);
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+
+    }
+
+    &:focus-visible,
+    &:hover {
+      width: 56px;
+    }
+
+    &.--next {
+      transform: rotate(180deg);
+    }
+  }
+}

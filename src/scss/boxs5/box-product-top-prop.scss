@@ -1,0 +1,51 @@
+.box-product-top-prop {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (max-width: 1000px) {
+    gap: 8px;
+  }
+  
+  &__title {
+    color: var(--black, #141414);
+    font-family: var(--second-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    @media (max-width: 1000px) {
+      font-size: 18px;
+    }
+  }
+  .x2_j_card-product__tags {
+    max-width: 400px;
+    margin-bottom: 0;
+  }
+  .x2_j_tag {
+    height: fit-content;
+    display: flex;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 130%;
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
+    &.yellow {
+      color: #FFA000;
+    }
+    &.peach {
+      color: #F3A66B;
+    }
+    &.spices {
+      color: #7E5A41;
+    }
+    &.orange {
+      color: #FF8000;
+    }
+    &.green {
+      color: #7EA34E;
+    }
+  }
+}

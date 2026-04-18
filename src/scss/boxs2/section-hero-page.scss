@@ -1,0 +1,75 @@
+.section-hero-page {
+  &__btn {
+    height: 60px;
+    padding: 0 39px;
+    white-space: nowrap;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    border-radius: 1.243px;
+    background-color: var(--pink, #D9315A);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+  .card-hero {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(56, 16, 103, 0.56) 0%, rgba(56, 16, 103, 0.56) 100%);
+    }
+    &__container {
+      position: relative;
+      z-index: 2;
+    }
+    &__info-top {
+      gap: 0;
+      img {
+        transform: translate(-27px, 5px);
+        width: 379px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-hero-page {
+    .card-hero {
+      &__info-top {
+        img {
+          transform: translate(-20px, 0);
+          width: 292px;
+        }
+      }
+      &__desc {
+        max-width: 230px;
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-hero-page {
+    &__btn {
+      height: 56px;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .card-hero {
+      &__info-top {
+        gap: 4px;
+        img {
+          transform: none;
+          width: 216px;
+        }
+      }
+    }
+  }
+}

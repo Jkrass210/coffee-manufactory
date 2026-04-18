@@ -1,0 +1,88 @@
+.swiper-recipe {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  &__line-nav {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1100px) {
+      padding-top: 24px;
+    }
+  }
+
+  &__group-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+  }
+
+  .swiper-student-reviews__btn {
+    background-color: #F8F4F3;
+    @media (max-width: 1100px) {
+      height: 48px;
+      &.--prev {
+        flex: none;
+        width: 48px !important;
+      }
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &.--prev {
+      width: 56px !important;
+    }
+
+    &.--next {
+      width: 108px;
+      flex: none;
+    }
+
+    svg {
+      path {
+        transition: fill 0.4s ease-in-out;
+      }
+    }
+
+    @media (min-width: 1001px) {
+
+      &:focus-visible,
+      &:hover {
+        background-color: var(--violet, #381067);
+
+        svg {
+          path {
+            fill: var(--white);
+          }
+        }
+      }
+
+    }
+  }
+
+  &-pagination {
+    padding: 5px 11px;
+    height: 56px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #F8F4F3;
+    color: var(--violet, #381067);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    @media (max-width: 1100px) {
+      height: 48px;
+    }
+  }
+}

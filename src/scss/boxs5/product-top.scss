@@ -1,0 +1,210 @@
+.x2_j_product-top {
+  display: grid;
+  grid-template-columns: calc(491 / 998 * 100%) 1fr;
+  gap: 35px;
+
+  @media (max-width: 1300px) {
+    grid-template-columns: calc(250 / 587 * 100%) 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 1100px) {
+    .x2_j_card-product__status-product {
+      flex-direction: row;
+      gap: 12px;
+
+      img {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+
+  @media (max-width: 1000px) {
+    .x2_j_card-product__status-product {
+      flex-direction: column;
+      gap: 8px;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__left {
+    @media (max-width: 1000px) {
+      margin: 0 auto;
+      width: 450px;
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+    @media (max-width: 1000px) {
+      margin: 0 auto;
+      width: 450px;
+      max-width: 100%;
+    }
+  }
+
+  &__mobile-title {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+      padding-right: 40px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    color: var(--black, #141414);
+    font-family: var(--second-family);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    @media (max-width: 1300px) {
+      font-size: 24px;
+    }
+    @media (max-width: 1000px) {
+      color: var(--black, #141414);
+      font-family: var(--second-family);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 115%;
+    }
+  }
+
+  &__box-swiper {
+    position: relative;
+    padding-bottom: 82px;
+
+    @media (max-width: 1300px) {
+      padding-bottom: 68px;
+    }
+
+    @media (min-width: 1001px) {
+      &:hover {
+        .x2_j_card-product__favourites {
+          opacity: 1;
+        }
+      }
+    }
+
+    .x2_j_card-product__favourites {
+      top: 0;
+      right: 0;
+    }
+
+    .x2_j_card-product__status-product {
+      top: 0;
+      left: 0;
+
+      @media (max-width: 1000px) {
+        top: auto;
+      }
+    }
+  }
+
+  &__line-title {
+    margin-bottom: 24px;
+    @media (max-width: 1300px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__mobile-info {
+    display: none;
+    @media (max-width: 1000px) {
+      display: flex;
+      margin-bottom: 16px;
+      .box-answers-tabs {
+        width: 100%;
+      }
+      .card-answers-tab {
+        &:has(.card-answers-tab__btn.active) {
+          background-color: transparent;
+        }
+        &__btn {
+          padding: 0;
+          height: auto;
+          font-size: 18px;
+          color: var(--black, #141414);
+          .svg {
+            width: 18px;
+            height: 18px;
+            background-color: transparent;
+            color: var(--pink);
+          }
+        }
+        &__box-info {
+          margin: 0;
+          padding: 8px 0 0;
+        }
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 28px;
+    @media (max-width: 1300px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__prop {
+    margin-bottom: 18px;
+  }
+  &__tastes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
+    .x2_j_box-taste__name {
+      font-size: 14px;
+      @media (max-width: 1300px) {
+        font-size: 13px;
+      }
+    }
+    .x2_j_box-taste .x2_j_group-estimation .x2_j_esti {
+      width: 18px;
+      height: 18px;
+      @media (max-width: 1300px) {
+        width: 14px;
+        height: 14px;
+      }
+      @media (max-width: 1000px) {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    .x2_j_box-taste .x2_j_group-estimation .x2_j_esti.half::after {
+      border-top: 16px solid var(--pink, #D9315A);
+      border-right: 16px solid transparent;
+      @media (max-width: 1300px) {
+        border-top: 12px solid var(--pink, #D9315A);
+        border-right: 12px solid transparent;
+      }
+      @media (max-width: 1000px) {
+        border-top: 11px solid var(--pink, #D9315A);
+        border-right: 11px solid transparent;
+      }
+    }
+  }
+}

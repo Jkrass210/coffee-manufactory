@@ -1,0 +1,26 @@
+.section-advantages-p-s {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 28px;
+    row-gap: 38px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .section-advantages-p-s {
+    &__list {
+      grid-template-columns: 1fr;
+      row-gap: 43px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-advantages-p-s {
+    margin-bottom: 56px;
+    &__list {
+      row-gap: 32px;
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.section-contacts-p-s {
+  .section-title {
+    max-width: 87%;
+    margin-bottom: 52px;
+  }
+  &__content {
+    display: flex;
+    gap: calc(112 / 1520 * 100%);
+  }
+
+  &__left {
+    width: calc(648 / 1520 * 100%);
+  }
+
+  &__right {
+    margin-right: -190px;
+    display: flex;
+    flex: 1;
+  }
+
+  &__map {
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    &-top {
+      padding-bottom: 34px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span {
+        color: var(--white, #FFF);
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        opacity: 0.5;
+      }
+      a, p {
+        color: #FFF;
+        font-family: var(--font-family);
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+      }
+    }
+    &-bottom {
+      padding-top: 39px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      border-top: 1px solid #ffffff4f;
+      span {
+        color: var(--white, #FFF);
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        opacity: 0.5;
+      }
+      a, p {
+        width: fit-content;
+        color: #FFF;
+        font-family: var(--font-family);
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -0.56px;
+        &.network {
+          position: relative;
+          color: var(--pink, #D9315A);
+          &::before {
+            content: '';
+            position: absolute;
+            inset: auto 0 1px 0;
+            height: 2px;
+            background-color: var(--pink, #D9315A);
+          }
+        }
+      }
+    }
+  }
+
+  &__box-btn {
+    padding-top: 96px;
+  }
+  &__btn {
+    width: 100%;
+    max-width: 396px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 56px;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 133.333%;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    border-radius: 1.243px;
+    border: 1px solid var(--white, #FFF);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--pink);
+    }
+  }
+}
+
+@media (max-width: 1919px) {
+  .section-contacts-p-s {
+    &__right {
+      margin-right: -24px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-contacts-p-s {
+    .section-title {
+      max-width: 80%;
+      margin-bottom: 27px;
+    }
+    &__content {
+      display: flex;
+      gap: calc(24 / 976 * 100%);
+    }
+    &__left {
+      width: calc(476 / 976 * 100%);
+    }
+    &__map {
+      min-height: 489px;
+    }
+    &__address {
+      &-top {
+        padding-bottom: 30px;
+        span {
+          font-size: 17px;
+        }
+        a, p {
+          font-size: 22px;
+        }
+      }
+      &-bottom {
+        gap: 5px;
+        padding-top: 34px;
+        span {
+          font-size: 17px;
+        }
+        a, p {
+          font-size: 22px;
+        }
+      }
+    }
+    &__btn {
+      height: 64px;
+    }
+    &__box-btn {
+      padding-top: 73px;
+    }
+    &__btn {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-contacts-p-s {
+    &__right {
+      margin-right: -16px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-contacts-p-s {
+    .section-title {
+      max-width: max-content;
+      margin-bottom: 22px;
+    }
+    &__content {
+      flex-direction: column;
+      gap: 67px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      margin-left: -16px;
+      min-height: 360px;
+    }
+
+    &__address {
+      &-top {
+        gap: 1px;
+        padding-bottom: 24px;
+        a, p {
+          font-size: 18px;
+        }
+      }
+      &-bottom {
+        border: none;
+        padding-top: 0;
+        a, p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__box-btn {
+      display: none;
+    }
+    &__map {
+      min-height: 360px;
+    }
+  }
+}

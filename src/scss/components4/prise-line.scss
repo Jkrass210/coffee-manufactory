@@ -1,0 +1,32 @@
+.prise-line {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 1300px) {
+    gap: 20px;
+  }
+  .name {
+    color: var(--text-gray, #CCC);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 1300px) {
+      font-size: 16px;
+    }
+  }
+  .info {
+    color: var(--black, #141414);
+    text-align: right;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 1300px) {
+      font-size: 16px;
+    }
+  }
+}

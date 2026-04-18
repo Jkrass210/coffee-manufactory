@@ -1,0 +1,10 @@
+.product-main-info {
+  column-count: 2;
+  column-gap: calc(48 / 471 * 100%);
+  @media (max-width: 1300px) {
+    column-gap: calc(28 / 313 * 100%);
+  }
+  @media (max-width: 1000px) {
+    column-gap: 28px;
+  }
+}

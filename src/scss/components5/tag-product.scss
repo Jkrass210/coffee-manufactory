@@ -1,0 +1,24 @@
+.tag-product {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  @media (max-width: 1300px) {
+    align-items: center;
+  }
+  img {
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    @media (max-width: 1000px) {
+      flex-shrink: 0;
+    }
+  }
+  .desc {
+    color: var(--black, #141414);
+    font-family: var(--second-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}

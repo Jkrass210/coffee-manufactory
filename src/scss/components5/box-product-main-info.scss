@@ -1,0 +1,32 @@
+.box-product-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .name {
+    color: #14141480;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    @media (max-width: 1300px) {
+      font-size: 13px;
+    }
+  }
+  .info {
+    color: var(--black, #141414);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
+  }
+}

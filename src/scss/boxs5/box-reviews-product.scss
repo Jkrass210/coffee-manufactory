@@ -1,0 +1,62 @@
+.box-reviews-product {
+  position: relative;
+  @media (max-width: 1100px) {
+    margin: 0 -28px;
+    .swiper-reviews-product {
+      padding: 0 28px;
+    }
+  }
+  @media (max-width: 1000px) {
+    margin: 0 -20px;
+    .swiper-reviews-product {
+      padding: 0 20px;
+    }
+  }
+  &__box-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    @media (max-width: 1100px) {
+      right: 28px;
+    }
+    @media (max-width: 1000px) {
+      right: 20px;
+    }
+  }
+  &__btn-order {
+    height: 56px;
+    width: 216px;
+    max-width: 100%;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.243px;
+    background-color: var(--pink, #D9315A);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 1001px) {
+      &:focus-visible, &:hover {
+        background-color: var(--violet);
+      }
+    }
+    @media (max-width: 1100px) {
+      height: 48px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 15px;
+      width: 160px;
+    }
+  }
+}

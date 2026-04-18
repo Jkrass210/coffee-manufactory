@@ -1,0 +1,143 @@
+.card-student-reviews {
+  min-height: 305.8px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  padding: 28px 28px 32px 28px;
+  background-color: var(--grape, #19084B);
+
+  &__top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__box-avatar {
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+
+    picture {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__box-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &__desc {
+    color: var(--white, #FFF);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    opacity: 0.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 1.2em;
+    line-height: 1.2em;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+  }
+
+  &__main-desc {
+    overflow: hidden;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+
+    &.hidden-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 4.8em;
+      line-height: 1.2em;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: fit-content;
+    color: var(--pink, #D9315A);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: auto 0 -1px 0;
+      height: 1px;
+      background-color: var(--pink, #D9315A);
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-student-reviews {
+    min-height: 295px;
+    gap: 17px;
+    &__desc {
+      -webkit-line-clamp: 2;
+      max-height: 2.4em;
+    }
+    &__bottom {
+      gap: 36px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .card-student-reviews {
+    min-height: 273px;
+    padding: 24px;
+    gap: 21px;
+    &__bottom {
+      gap: 30px;
+    }
+    &__btn {
+      font-size: 16px;
+    }
+  }
+}

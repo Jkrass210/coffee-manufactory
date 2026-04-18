@@ -1,0 +1,124 @@
+.x2_j_filter-top {
+  padding-top: 56px;
+  @media (max-width: 1100px) {
+    padding-top: 44px;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 36px;
+  }
+  &__line-top {
+    @media (max-width: 1500px) {
+      margin: 0 -24px;
+    }
+    @media (max-width: 1000px) {
+      margin: 0 -16px;
+    }
+  }
+  &__list-top {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 1500px) {
+      gap: calc(28 / 1520 * 100%);
+      padding: 0 24px;
+    }
+    @media (max-width: 1100px) {
+      gap: calc(16 / 976 * 100%);
+    }
+    @media (max-width: 1000px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__line-bottom {
+    margin: 36px 0;
+    padding-bottom: 44px;
+    border-bottom: 1px solid #e8e8e8;
+    @media (max-width: 1100px) {
+      position: relative;
+      margin: 28px -24px 36px;
+      padding-bottom: 36px;
+      border-bottom: none;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 0;
+        height: 1px;
+        background-color: #e8e8e8;
+      }
+    }
+    @media (max-width: 1000px) {
+      margin: 16px -16px 28px;
+      padding-bottom: 28px;
+      &::after {
+        left: 16px;
+        right: 16px;
+      }
+    }
+  }
+
+  &__box-swiper {
+    position: relative;
+    &:has(div.swiper-slide.swiper-slide-active:first-child) {
+      &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        inset: 0 0 0 auto;
+        z-index: 2;
+        width: 144px;
+        background: linear-gradient(270deg, #F8F4F3 16.46%, rgba(248, 244, 243, 0.00) 100%);
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list-bottom {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 1100px) {
+      padding: 0 24px;
+    }
+    @media (max-width: 1000px) {
+      padding: 0 16px;
+    }
+    &.scroll-start {
+      position: relative;
+      &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        inset: 0 0 0 auto;
+        width: 144px;
+        background: linear-gradient(270deg, #F8F4F3 16.46%, rgba(248, 244, 243, 0.00) 100%);
+      }
+      @media (max-width: 1100px) {
+        &::after {
+          width: 175px;
+        }
+      }
+      @media (max-width: 1000px) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

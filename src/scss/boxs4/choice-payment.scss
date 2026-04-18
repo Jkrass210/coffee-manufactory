@@ -1,0 +1,14 @@
+.choice-payment {
+  padding-top: 24px;
+  @media (max-width: 1300px) {
+    padding-top: 12px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    @media (max-width: 1300px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.drop-down-filter-1 {
+  display: flex;
+  position: relative;
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--black, #141414);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    transition: color 0.4s ease-in-out;
+    @media (max-width: 1500px) {
+      font-size: 14px;
+    }
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .svg {
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover {
+      color: var(--violet);
+    }
+  }
+
+
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    min-width: 316px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    @media (max-width: 1500px) {
+      min-width: 100%;
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__link {
+    padding: 12px 16px;
+    height: 48px;
+    color: var(--black, #141414);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    @media (max-width: 1500px) {
+      font-size: 14px;
+    }
+    &.disabled {
+      color: var(--pink, #D9315A);
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover {
+      background-color: #e3dfde;
+    }
+  }
+}

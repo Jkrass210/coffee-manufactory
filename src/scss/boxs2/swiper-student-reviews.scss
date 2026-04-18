@@ -1,0 +1,94 @@
+.swiper-student-reviews {
+  overflow: visible;
+
+  .swiper-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  &__group-nav {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #1D1D1D;
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    &.swiper-button-lock {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .small {
+      position: absolute;
+
+    }
+
+    .big {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      width: 108px;
+      background-color: var(--pink);
+
+      .small {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .big {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-student-reviews {
+    .swiper-wrapper {
+      margin-bottom: 21px;
+    }
+    &__btn {
+      height: 52px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .swiper-student-reviews {
+    .swiper-wrapper {
+      margin-bottom: 18px;
+    }
+    &__btn {
+      flex: 1;
+      width: auto;
+      height: 52px;
+    }
+  }
+}

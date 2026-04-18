@@ -1,0 +1,31 @@
+.x2_j_link-find-your {
+  height: 52px;
+  padding: 5px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white, #FFF);
+  white-space: nowrap;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  background-image: url('../img/link-find-your/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover {
+
+  }
+  @media (max-width: 1100px) {
+    height: 48px;
+  }
+  @media (max-width: 1000px) {
+    height: 44px;
+    padding: 5px 16px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,7 @@
+.desc-hidden-box {
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}

@@ -1,0 +1,39 @@
+.choice-delivery {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  @media (max-width: 1300px) {
+    padding-top: 12px;
+    gap: 24px;
+  }
+  &__warning {
+    padding: 24px;
+    background-color: #F9F9F9;
+    @media (max-width: 1300px) {
+      padding: 20px;
+    }
+    @media (max-width: 1000px) {
+      padding: 16px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-10, #F3F3F3);
+    @media (max-width: 1000px) {
+      padding: 16px 0;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+}

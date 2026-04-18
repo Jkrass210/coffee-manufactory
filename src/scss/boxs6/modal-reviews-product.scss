@@ -1,0 +1,49 @@
+.modal-reviews-product {
+  &__window {
+    max-width: 100%;
+    width: 524px;
+
+    .card-review {
+      overflow: hidden;
+      width: auto;
+      height: 337px;
+      min-height: 337px;
+      
+      @media (max-width: 1000px) {
+        margin-bottom: 0;
+        padding: 24px;
+      }
+      &__box-info {
+        
+        
+      }
+      &__desc {
+        max-height: calc(100% - 24px - 64px);
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background: var(--gray, #F8F4F3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--pink);
+        }
+      }
+    }
+
+    .box-reviews-product__btn-order {
+      @media (max-width: 1100px) {
+        height: 52px;
+      }
+    }
+  }
+}
+
+/* Общие настройки */
+.modal-reviews-product .card-review__desc {
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: var(--pink) var(--gray, #F8F4F3); /* thumb track */
+}

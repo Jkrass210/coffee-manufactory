@@ -91,6 +91,11 @@
             &:active {
               color: var(--pink);
             }
+
+            &.my-active {
+              pointer-events: none;
+              color: var(--pink);
+            }
           }
         }
       }
@@ -126,7 +131,7 @@
             &:hover,
             &:active {
               .svg {
-                background-color: var(--grape);
+                //background-color: var(--grape);
               }
             }
           }

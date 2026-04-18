@@ -1,0 +1,1 @@
+import{initWarnings}from"./module4/initWarnings.js";document.querySelectorAll(".js-warning").length&&initWarnings();

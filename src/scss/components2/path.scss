@@ -1,0 +1,104 @@
+.x2_j_path {
+  padding-top: 44px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  @media (max-width: 1100px) {
+    padding-top: 32px;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 28px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #F4F4F4;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    @media (max-width: 1100px) {
+      font-size: 14px;
+    }
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__link {
+    color: #F4F4F4;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    transition: color 0.4s ease-in-out;
+    @media (max-width: 1100px) {
+      font-size: 14px;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--pink);
+    }
+  }
+  &__box-back {
+    display: none;
+    @media (max-width: 1000px) {
+      display: flex;
+    }
+  }
+  &__btn-back {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #F4F4F4;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 18.4px */
+    .svg {
+      width: 32px;
+      height: 24px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--pink, #D9315A);
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.static-pages {
+  .x2_j_path {
+    &__item {
+      color: var(--black, #141414);
+    }
+    &__link {
+      color: var(--gray-text, #BCBDDE);
+      &:focus-visible,&:hover,&:active {
+        color: var(--pink);
+      }
+    }
+    &__btn-back {
+      color: var(--black, #141414);
+    }
+  }
+}

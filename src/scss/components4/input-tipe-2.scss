@@ -1,0 +1,30 @@
+.input-tipe-2 {
+  display: flex;
+  &__input {
+    height: 63px;
+    padding: 10px 20px;
+    width: 100%;
+    outline: none;
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    border: 1px solid var(--gray-30, #D2D2D2);
+    @media (max-width: 1100px) {
+      padding: 7px 20px;
+      height: 52px;
+      font-size: 17px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+    &::placeholder {
+      color: var(--text-gray, #CCC);
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+}

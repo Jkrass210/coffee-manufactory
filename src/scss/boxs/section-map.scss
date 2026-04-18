@@ -88,7 +88,7 @@
     line-height: 100%;
     letter-spacing: 0.02em;
     text-align: center;
-    color: var(--white);
+    color: var(--white) !important;
     min-width: 348px;
     text-transform: uppercase;
     transition: background-color 0.4s ease-in;

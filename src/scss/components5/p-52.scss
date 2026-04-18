@@ -1,0 +1,9 @@
+.x2_j_p-52 {
+  padding: 52px;
+  @media (max-width: 1300px) {
+    padding: 28px;
+  }
+  @media (max-width: 1000px) {
+    padding: 20px;
+  }
+}

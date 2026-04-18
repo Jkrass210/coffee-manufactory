@@ -1,0 +1,103 @@
+.dropDown-type-3 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  &__btn {
+    width: 100%;
+    padding: 6px 12px;
+    height: 44px;
+    overflow: hidden;
+    color: var(--violet, #381067);
+    text-overflow: ellipsis;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    background-color: #F8F4F3;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .text {
+      text-align: start;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .svg {
+      width: 17px;
+      height: 19px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover {
+
+    }
+    @media (max-width: 1100px) {
+      height: 40px;
+      padding: 4px 12px;
+    }
+  }
+
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #EFEBEA;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    .text {
+      cursor: pointer;
+      white-space: nowrap;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 36px;
+      align-items: center;
+      justify-content: start;
+      padding: 12px 12px;
+      overflow: hidden;
+      color: var(--black, #141414);
+      text-overflow: ellipsis;
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+      &.disabled {
+        pointer-events: none;
+        color: var(--pink, #D9315A);
+      }
+      &:hover {
+        background-color: #e3dfde;
+      }
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

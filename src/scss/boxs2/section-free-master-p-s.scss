@@ -1,0 +1,128 @@
+.section-free-master-p-s {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -70px 0 -70px 0;
+    z-index: 0;
+    background-image: url(../img/page-school/section-free-master-p-s/bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top 0 center;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    gap: calc(28 / 1520 * 100%);;
+  }
+  &__left {
+    width: calc(746 / 1520 * 100%);
+  }
+  &__right {
+    flex: 1;
+  }
+  &__right-wrapper {
+    margin-top: -19px;
+    padding: 56px 56px 90px;
+    background-color: var(--black, #141414);
+    background-image: url(../img/page-school/section-free-master-p-s/bg2.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  .section-title {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  &__box-btn {
+    padding-top: 36px;
+  }
+  &__btn {
+    max-width: 346px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 36px;
+    height: 52px;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    border-radius: 1.243px;
+    background-color: var(--pink, #D9315A);
+  }
+  &__title {
+    margin-bottom: 30px;
+    color: #FFF;
+    font-family: var(--second-family);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-free-master-p-s {
+    &::before {
+      inset: -35px 0 -70px 0;
+      background-image: url("../img/page-school/section-free-master-p-s/bg(1100).svg");
+    }
+    &__content {
+      flex-direction: column;
+      gap: 43px;
+    }
+    &__left {
+      width: 100%;
+    }
+    .section-title {
+      margin-bottom: 34px;
+    }
+    &__btn {
+      max-width: 476px;
+      height: 64px;
+    }
+    &__right-wrapper {
+      margin-top: 0;
+      padding: 48px;
+      background-size: contain;
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .section-free-master-p-s {
+    &::before {
+      display: none;
+    }
+    .section-title {
+      margin-bottom: 25px;
+    }
+    &__content {
+      gap: 36px;
+    }
+    &__box-btn {
+      padding-top: 28px;
+    }
+    &__btn {
+      max-width: 100%;
+      height: 56px;
+    }
+    &__right-wrapper {
+      padding: 24px;
+      background-image: url("../img/page-school/section-free-master-p-s/bg2(710).svg");
+      background-position: bottom right;
+      background-size: auto;
+    }
+    &__title {
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+  }
+}

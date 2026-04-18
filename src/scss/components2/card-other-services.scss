@@ -1,0 +1,83 @@
+.card-other-services {
+  position: relative;
+  overflow: hidden;
+
+  &:has(.card-other-services__link:hover) {
+    .card-other-services__img {
+      transform: scale(1.2);
+    }
+  }
+
+  picture {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &.card-other-services__picture {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 80.82%;
+  }
+
+  &__link {
+    padding: 28px;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.40) -9.56%, rgba(0, 0, 0, 0.00) 57.25%);
+    }
+
+    img {
+      position: relative;
+      z-index: 3;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__title {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-other-services {
+    &::before {
+      padding-top: 78.67%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-other-services {
+    &::before {
+      padding-top: 75.61%;
+    }
+  }
+}

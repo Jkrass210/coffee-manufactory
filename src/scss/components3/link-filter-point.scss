@@ -1,0 +1,90 @@
+.x2_j_link-filter-point {
+  position: relative;
+  height: 80px;
+  min-width: 200px;
+  flex: 1;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  color: var(--violet, #381067);
+  font-family: var(--second-family);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: color 0.4s ease-in-out;
+
+  @media (max-width: 1400px) {
+    height: 64px;
+    min-width: 147px;
+    font-size: 18px;
+    padding: 12px 8px 12px 16px;
+  }
+
+  @media (max-width: 1000px) {
+    height: 52px;
+    min-width: 132px;
+    font-size: 16px;
+    padding: 6px 6px 6px 16px;
+  }
+
+  span {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .svg {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1400px) {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 25px;
+        height: auto;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/link-filter-point/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: 1000px) {
+
+    &:focus-visible,
+    &:hover {
+      color: var(--pink, #D9315A);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.active {
+    color: var(--pink, #D9315A);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}

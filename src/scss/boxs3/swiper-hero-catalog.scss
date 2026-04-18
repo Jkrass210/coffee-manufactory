@@ -1,0 +1,45 @@
+.swiper-hero-catalog {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+  &__group-btn {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    padding: 0 12px;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+    .btn-swiper-catalog {
+      pointer-events: auto;
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white, #FFF);
+      transition: color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover {
+        color: var(--pink, #d9315a);
+      }
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+    &:has(.swiper-button-lock) {
+      display: none;
+    }
+  }
+}

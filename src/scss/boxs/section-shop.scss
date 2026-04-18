@@ -82,6 +82,7 @@
         }
       }
       .bottom {
+        padding: 84px 0 74px;
         &__list {
           gap: 40px;
           grid-template-columns: 1fr;
@@ -101,7 +102,7 @@
         gap: 11px;
       }
       .bottom {
-        padding: 139px 0 124px;
+        //padding: 139px 0 124px;
         &__list {
           gap: 46px;
         }

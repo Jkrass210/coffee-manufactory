@@ -1,0 +1,23 @@
+.input-tipe-1 {
+  width: 100%;
+  padding: 16px 50px 16px 16px;
+  height: 56px;
+  border: 1px solid var(--gray-30, #D2D2D2);
+  color: var(--black);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  @media (max-width: 1300px) {
+    height: 52px;
+    font-size: 16px;
+    padding: 14px 50px 14px 16px;
+  }
+  &::placeholder {
+    color: var(--text-gray, #CCC);
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+}

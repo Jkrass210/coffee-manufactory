@@ -1,0 +1,56 @@
+<section class="section-contacts-p-s section">
+  <div class="section-contacts-p-s__container x2_j_container">
+    <div class="section-contacts-p-s__content">
+      <div class="section-contacts-p-s__left">
+        <h2 class="section-title">Наш адрес и контакты</h2>
+        <div class="section-contacts-p-s__address">
+          <address class="section-contacts-p-s__address-top">
+            <span>Адрес</span>
+            <p>
+              190020 Санкт-Петербург, Ст. Балтийская, наб. Обводного канала 134-136-138
+            </p>
+          </address>
+          <div class="section-contacts-p-s__address-bottom">
+            <span>Телефон</span>
+            <a href="tel:+7 812 767 39 05">+7 812 767 39 05</a>
+            <a class="network" href="" target="_blank">Telegram</a>
+          </div>
+        </div>
+        <div class="section-contacts-p-s__box-btn">
+          <a href="#" target="_blank" class="section-contacts-p-s__btn">
+            Написать нам
+          </a>
+        </div>
+      </div>
+      <div class="section-contacts-p-s__right">
+        <div class="section-contacts-p-s__map" id="map"></div>
+        <script>
+          ymaps.ready(init);
+
+          function init() {
+            const map = new ymaps.Map("map", {
+              center: [59.931253, 30.355830],
+              zoom: 14
+            });
+
+            const placemark1 = new ymaps.Placemark(
+              [59.931247, 30.355825],
+              {
+                hintContent: "Моя метка",
+                balloonContent: "Описание"
+              },
+              {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/map-icon/1.svg',
+                iconImageSize: [55, 55],
+                iconImageOffset: [-20, -20]
+              }
+            );
+
+            map.geoObjects.add(placemark1);
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

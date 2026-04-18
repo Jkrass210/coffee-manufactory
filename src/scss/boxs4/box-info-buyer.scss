@@ -1,0 +1,20 @@
+.box-info-buyer {
+  padding-top: 24px;
+  @media (max-width: 1300px) {
+    padding-top: 12px;
+  }
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
+    .textarea-type-1 {
+      grid-column: span 2;
+      @media (max-width: 1000px) {
+        grid-column: span 1;
+      }
+    }
+  }
+}

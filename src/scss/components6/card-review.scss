@@ -1,0 +1,13 @@
+.card-review {
+  cursor: pointer;
+  @media (min-width: 1001px) {
+    &:hover {
+      .card-review__btn {
+        color: var(--black);
+        &::before {
+          background-color: var(--black);
+        }
+      }
+    }
+  }
+}

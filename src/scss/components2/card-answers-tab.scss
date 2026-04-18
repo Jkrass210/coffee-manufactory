@@ -1,0 +1,110 @@
+.card-answers-tab {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.20);
+  transition: background-color 0.4s ease-in-out;
+  &:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+  }
+  &:has(.card-answers-tab__btn.active) {
+    background-color: var(--grape, #19084B);
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 110px;
+    padding: 13px 48px;
+    text-align: start;
+    color: #FFF;
+    font-family: var(--second-family);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background-color: var(--pink);
+    }
+
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+
+      & + .card-answers-tab__box-info {
+        display: flex;
+      }
+    }
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__box-info {
+    display: none;
+    padding: 0 48px 48px 48px;
+    &.active {
+      display: flex;
+    }
+  }
+  &__desc {
+    color: var(--white, #FFF);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 27px */
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-answers-tab {
+    &__btn {
+      height: 107px;
+      font-size: 24px;
+      .svg {
+        width: 44px;
+        height: 44px;
+      }
+    }
+    &__box-info {
+      margin-top: -13px;
+    }
+    &__desc {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .card-answers-tab {
+    &__btn {
+      height: 94px;
+      padding: 13px 24px;
+      font-size: 20px;
+      .svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &__box-info {
+      margin-top: -6px;
+      padding: 0 25px 28px 25px;
+    }
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}

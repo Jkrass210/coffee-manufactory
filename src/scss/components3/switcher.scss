@@ -1,0 +1,64 @@
+.x2_j_switcher {
+  position: relative;
+  max-width: 140px;
+  width: 100%;
+  min-height: 44px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @media (max-width: 1000px) {
+    min-height: 40px;
+    max-width: 125px;
+  }
+  &__label {
+    cursor: pointer;
+    display: flex;
+  }
+  &__input {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    &:checked + .x2_j_switcher__status {
+      background-position: center right;
+      i:first-child {
+        color: var(--violet, #381067);
+      }
+      i:last-child {
+        color: var(--white, #FFF);
+      }
+    }
+  }
+  &__status {
+    position: absolute;
+    inset: 0;
+    border: 1px solid #381067;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    background-image: url('../img/card-product/status-product/switcher/switch.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    transition: background-position 0.3s ease-in-out;
+    i {
+      text-align: center;
+      flex: 1;
+      font-family: var(--font-family);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      transition: color 0.3s ease-in-out;
+      &:first-child {
+        color: var(--white, #FFF);
+      }
+      &:last-child {
+        color: var(--violet, #381067);
+      }
+    }
+
+  }
+}

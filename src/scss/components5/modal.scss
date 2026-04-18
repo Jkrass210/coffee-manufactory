@@ -1,0 +1,119 @@
+/* Стили для модалки */
+.modal {
+  display: flex;
+  /* Скрыта по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Прозрачный фон */
+  z-index: 9999;
+  justify-content: center;
+  overflow: auto;
+  padding: 60px 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__body {
+    position: relative;
+    max-width: 100%;
+    margin: auto 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 8px);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pink);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    @media (min-width: 1001px) {
+
+      &:focus-visible,
+      &:hover {
+        background-color: var(--violet);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 48px;
+      width: 100%;
+
+      .text {
+        display: flex;
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+
+      .svg {
+        display: none;
+      }
+    }
+
+    .text {
+      display: none;
+    }
+
+    .svg {
+      display: flex;
+    }
+  }
+
+  .card-review {
+    max-width: 100%;
+    width: 524px;
+    min-height: 250px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 56px;
+    }
+
+    &__desc {
+      display: block;
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+/* Анимация для появления модалки */
+.modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

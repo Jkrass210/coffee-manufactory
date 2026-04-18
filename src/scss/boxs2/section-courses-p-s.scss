@@ -1,0 +1,48 @@
+.section-courses-p-s {
+  margin-bottom: 138px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -5px 0 0 0;
+    z-index: 0;
+    background-image: url(../img/page-school/section-courses-p-s/bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  &__content {
+    position: relative;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+@media (max-width: 1250px) {
+  .section-courses-p-s {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-courses-p-s {
+    margin-bottom: 102px;
+  }
+}
+
+@media (max-width: 710px) {
+  .section-courses-p-s {
+    margin-bottom: 75px;
+    &::before {
+      display: none;
+    }
+    &__list {
+      gap: 12px;
+    }
+  }
+}

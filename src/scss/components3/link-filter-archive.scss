@@ -1,0 +1,31 @@
+.x2_j_link-filter-archive {
+  height: 80px;
+  min-width: 230px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet, #381067);
+  text-align: center;
+  font-family: var(--second-family);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: rgba(20, 20, 20, 0.04);
+  @media (max-width: 1400px) {
+    height: 64px;
+    min-width: 148px;
+    padding: 12px 8px;
+    font-size: 18px;
+  }
+  @media (max-width: 1000px) {
+    height: 52px;
+    min-width: 132px;
+    padding: 6px 6px;
+    font-size: 16px;
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+}

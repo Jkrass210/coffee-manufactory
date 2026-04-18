@@ -1,0 +1,35 @@
+.x2_j_link-category {
+  height: 52px;
+  padding: 5px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet, #381067);
+  white-space: nowrap;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border: 1px solid var(--violet, #381067);
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  @media (max-width: 1100px) {
+    height: 48px;
+  }
+  @media (max-width: 1000px) {
+    height: 44px;
+    padding: 5px 16px;
+    font-size: 14px;
+  }
+  &.active {
+    color: var(--pink, #D9315A);
+    background-color: var(--violet, #381067);
+  }
+  &:focus, &:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover {
+    color: var(--white, #FFF);
+    background-color: var(--violet, #381067);
+  }
+}

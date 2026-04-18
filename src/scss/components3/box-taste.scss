@@ -1,0 +1,44 @@
+.x2_j_box-taste {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media (max-width: 1100px) {
+    gap: 6px;
+  }
+  &__name {
+    color: var(--black, #141414);
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 92.308% */
+    @media (max-width: 1100px) {
+      font-size: 12px;
+    }
+  }
+  .x2_j_group-estimation {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    .x2_j_esti {
+      position: relative;
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      border: 1px solid var(--pink, #D9315A);
+      &.all {
+        background-color: var(--pink, #D9315A);
+      }
+      &.half {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-top: 10px solid var(--pink, #D9315A);
+          border-right: 10px solid transparent;
+        }
+      }
+    }
+  }
+}

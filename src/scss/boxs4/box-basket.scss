@@ -1,0 +1,99 @@
+.x2_j_box-basket {
+  margin-top: 56px;
+  margin-bottom: 116px;
+  @media (max-width: 1300px) {
+    margin-top: 44px;
+    margin-bottom: 104px;
+  }
+  @media (max-width: 1000px) {
+    margin-top: 36px;
+    margin-bottom: 76px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 28px;
+    @media (max-width: 1300px) {
+      gap: 24px;
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: 28px;
+    }
+  }
+  &__left {
+    flex: 1;
+  }
+  &__right {
+    width: calc(359 / 1520 * 100%);
+    @media (max-width: 1300px) {
+      width: 309px;
+    }
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  &__mobile-menu {
+    display: none;
+    @media (max-width: 1000px) {
+      padding: 16px 0;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      z-index: 2;
+      inset: auto 0 0 0;
+      background-color: #FFF;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 -4px 8px 0 rgba(0, 0, 0, 0.06);
+    }
+    .x2_j_container {
+      width: 100%;
+    }
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .mobile-menu-top {
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      .name {
+        color: var(--gray-50, #979797);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .info {
+        color: var(--black, #141414);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+  .mobile-menu-botton {
+    &__link {
+      display: flex;
+      height: 44px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--pink);
+      color: var(--white);
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
