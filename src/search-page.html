@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Результаты поиска"})
+<body class="static-pages">
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    @@include('html/components/path-5.html')
+    <div class="x2_j_search-page">
+      @@include('html/components/line-title.html',{"title":"Результаты поиска"})
+      <div class="x2_j_container">
+        <div class="x2_j_search-page__box-search">
+
+          <div class="dropSearch">
+            <button class="dropSearch__btn-open btn-reset">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <div class="dropSearch__box">
+              <form>
+                <div class="dropSearch__wrapper js-clearing">
+                  <button class="dropSearch__btn-submit btn-reset">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input class="dropSearch__input js-clearing-input" placeholder="Я ищу..." type="text">
+                  <!-- тут класс js-close не нужен так как он отвечает за закрытие модалки -->
+                  <button type="button" class="dropSearch__btn-close btn-reset js-clearing-btn" aria-label="Закрыть поиск">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+                      <path d="M0.500111 7.57107L7.57118 0.500004M0.500111 0.500004L7.57118 7.57107" stroke="currentColor" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                  <button class="dropSearch__btn-submit-main btn-reset">
+                    <span class="text">Найти</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <div class="x2_j_search-page__box-count">
+          <p>Найдено <span>32</span> результатов</p>
+        </div>
+
+        <div class="x2_j_search-page__box-result js-tabs-1">
+          <div class="x2_j_search-page__line-nav js-tabs-1-line-btn">
+            <button class="x2_j_search-page__btn-nav btn-reset js-tabs-1-btn">
+              <span class="text">
+                Товары
+              </span>
+            </button>
+            <button class="x2_j_search-page__btn-nav btn-reset js-tabs-1-btn">
+              <span class="text">
+                Статьи
+              </span>
+            </button>
+          </div>
+          <div class="x2_j_search-page__content js-tabs-1-container-boxs">
+            <div class="x2_j_search-page__box js-tabs-1-box">
+              
+              <div class="x2_j_box-catalog__wrapper">
+                <div class="x2_j_box-catalog__list">
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product new week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag spices">пряности</span>
+                        <span class="x2_j_tag orange">цедра апельсина</span>
+                        <span class="x2_j_tag green">чай с бергамотом</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">730 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag cinnamon">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag cinnamon">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product new week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag spices">пряности</span>
+                        <span class="x2_j_tag orange">цедра апельсина</span>
+                        <span class="x2_j_tag green">чай с бергамотом</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">730 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag cinnamon">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag cinnamon">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product new week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag spices">пряности</span>
+                        <span class="x2_j_tag orange">цедра апельсина</span>
+                        <span class="x2_j_tag green">чай с бергамотом</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">1057 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product week">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag yellow">мед</span>
+                        <span class="x2_j_tag peach">персик</span>
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                            <span class="text" data-id="Аэропресс">Аэропресс</span>
+                            <span class="text" data-id="Капельная кофеварка, Харио">Капельная кофеварка, Харио</span>
+                            <span class="text" data-id="Кемекс">Кемекс</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">730 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1 Эфиопия Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Эспрессо кофеварки">Эспрессо кофеварки</span>
+                            <span class="text" data-id="Мока (гейзер)">Мока (гейзер)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">928 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+          
+                  <article class="x2_j_card-product">
+                    <div class="x2_j_card-product__top">
+                      <!--при добавлении класса active на favourites становиться актиной-->
+                      <a href="#" class="x2_j_card-product__favourites">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <use xlink:href="img/sprite.svg#favourites"></use>
+                        </svg>
+                      </a>
+                      <!--при добавлении клсасса 'new,new,hit,asses' на x2_j_card-product__status-product добавляется статус-->
+                      <div class="x2_j_card-product__status-product asses">
+                        <span class="x2_j_status-product new">
+                          <img src="img/card-product/status-product/1.svg">
+                        </span>
+                        <span class="x2_j_status-product week">
+                          <img src="img/card-product/status-product/2.svg">
+                        </span>
+                        <span class="x2_j_status-product hit">
+                          <img src="img/card-product/status-product/3.svg">
+                        </span>
+                        <span class="x2_j_status-product asses">
+                          <img src="img/card-product/status-product/4.svg">
+                        </span>
+                      </div>
+                      <div class="x2_j_card-product__box-swiper">
+                        <div class="x2_j_swiper-card-product swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="x2_j_card-product__img">
+                                <a href="#" class="x2_j_card-product__img-link">
+                                  <img src="img/card-product/1.png" alt="img">
+                                </a>  
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="x2_j_card-product__link"></a>
+                          <div class="x2_j_swiper-card-product-pagination"></div>
+                        </div>
+                      </div>
+                      <h4 class="x2_j_card-product__name">
+                        <a href="#">Эфиопия Гера G1</a>
+                      </h4>
+                    </div>
+          
+                    <div class="x2_j_card-product__bottom">
+                      <div class="x2_j_card-product__tags">
+                        <span class="x2_j_tag blue">персик</span>
+                      </div>
+                      <div class="x2_j_card-product__tastes">
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Кислотность</span>
+                          <div class="x2_j_group-estimation">
+                            <!--при добавлении на x2_j_esti-это квадратик "all" весь закрашивается "half" пол квадрата закрашено-->
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti half"></span>
+                            <span class="x2_j_esti "></span>
+                            <span class="x2_j_esti "></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Сладость</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                            <span class="x2_j_esti"></span>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_box-taste">
+                          <span class="x2_j_box-taste__name">Горечь</span>
+                          <div class="x2_j_group-estimation">
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                            <span class="x2_j_esti all"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__drop-down">
+                        <div class="dropDown-type-3">
+                          <button class="dropDown-type-3__btn btn-reset">
+                            <span class="text">Без помола</span>
+                            <span class="svg">
+                              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                              </svg>
+                            </span>
+                          </button>
+                          <div class="dropDown-type-3__box">
+                            <span class="text" data-id="Без помола">Без помола</span>
+                            <span class="text" data-id="Френч-пресс (самый крупный)">Френч-пресс (самый крупный)</span>
+                            <span class="text" data-id="Чашка(самый крупный)|Обжарка:Эспрессо">Чашка(самый
+                              крупный)|Обжарка:Эспрессо</span>
+                            <span class="text" data-id="Турка(самый мелкий)">Турка(самый мелкий)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-info">
+                        <div class="x2_j_switcher">
+                          <label class="x2_j_switcher__label">
+                            <input class="x2_j_switcher__input" type="checkbox">
+                            <span class="x2_j_switcher__status">
+                              <i>250гр</i>
+                              <i>1000гр</i>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="x2_j_card-product__line-info-box-dropDown">
+                          <div class="dropDown-type-3">
+                            <button class="dropDown-type-3__btn btn-reset">
+                              <span class="text">250гр</span>
+                              <span class="svg">
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                                  <use xlink:href="img/sprite.svg#dropDownType3"></use>
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="dropDown-type-3__box">
+                              <span class="text" data-id="250гр">250гр</span>
+                              <span class="text" data-id="1000гр">1000гр</span>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="x2_j_count">
+                          <button class="x2_j_count__btn btn-reset minus disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="1" viewBox="0 0 11 1" fill="none">
+                              <path d="M0.5 0.499959H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                          <input class="x2_j_count__input" type="text" name="count" value="1" readonly="">
+                          <button class="x2_j_count__btn btn-reset plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                              <path d="M5.5 10.5V0.5M0.5 5.5H10.5" stroke="currentColor" stroke-linecap="round" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="x2_j_card-product__line-payment">
+                        <div class="x2_j_card-product__price">
+                          <span class="title">Стоимость</span>
+                          <span class="price">947 ₽</span>
+                        </div>
+          
+                        <a href="#" class="x2_j_card-product__basket">
+                          <span class="text">В КОРЗИНУ</span>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="x2_j_static-line-loading">
+                  <!--при добавлении класса loading на ссылку начинается загрузка-->
+                  <a href="#" class="x2_j_static-link-load">
+                    <span class="main-text">Загрузить ещё</span>
+                    <span class="text">Загружаем ещё</span>
+                    <span class="load"></span>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+            <div class="x2_j_search-page__box js-tabs-1-box">
+
+              <div class="x2_j_search-page__box-list-result">
+
+                <ul class="x2_j_search-page__list-result list-reset">
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Три простейших рецепта раф-кофе для дома как в кофейне
+                      </span>
+                      <span class="text">
+                        ... начинают вести себя непредсказуемо. Для приготовления кофе берите плотные сорта без ярко выраженной кислотности — например Перу Монте Верде, <b>Уганду</b> Рувензори, Бразилию Сантос или любой наш бленд. Пробуйте разные сочетания и пропорции, не держите рецепты «в столе». Раф — как раз ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="x2_j_search-page__link">
+                      <span class="title">
+                        Разбор блендов: что это такое и для чего смешивают кофе
+                      </span>
+                      <span class="text">
+                        ... заменить его другим кофе, который будет иметь схожие вкусовые качества, но из другого региона. Например, заменить классическую Бразилию <b>Угандой</b> натуральной обработки. И вот вам — тот же стабильный бленд, но с небольшими нюансами. Профессиональные кофейные технологи ориентируются ...
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="x2_j_static-line-loading">
+                  <!--при добавлении класса loading на ссылку начинается загрузка-->
+                  <a href="#" class="x2_j_static-link-load">
+                    <span class="main-text">Загрузить ещё</span>
+                    <span class="text">Загружаем ещё</span>
+                    <span class="load"></span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  @@include('html/boxs/footer.html')
+</body>
+</html>

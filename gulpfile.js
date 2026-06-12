@@ -29,6 +29,7 @@ import { fslightbox } from './gulp/tasks/fslightbox.js';
 import { jsModules4 } from './gulp/tasks/jsModules4.js';
 import { jsModules5 } from './gulp/tasks/jsModules5.js';
 import { jsModules6 } from './gulp/tasks/jsModules6.js';
+import { jsModules7 } from './gulp/tasks/jsModules7.js';
 
 function watcher() {
   gulp.watch(path.watch.html, html)
@@ -39,13 +40,14 @@ function watcher() {
   gulp.watch(path.watch.jsModules4, jsModules4)
   gulp.watch(path.watch.jsModules5, jsModules5)
   gulp.watch(path.watch.jsModules6, jsModules6)
+  gulp.watch(path.watch.jsModules7, jsModules7)
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
 }
 
 export { svgSprive }
 
-const mainTasks = gulp.parallel(html, normalize, scss, jsModules, jsModules2, jsModules3, jsModules4, jsModules5, jsModules6, js, images, fonts, vendorJsSwiper, vendorCssSwiper, fslightbox)
+const mainTasks = gulp.parallel(html, normalize, scss, jsModules, jsModules2, jsModules3, jsModules4, jsModules5, jsModules6, jsModules7, js, images, fonts, vendorJsSwiper, vendorCssSwiper, fslightbox)
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

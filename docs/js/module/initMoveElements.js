@@ -1,109 +1,96 @@
 export function initMoveElements(selectors) {
-    const {
-        sourceSelector,
-        targetSelector,
-        breakpoint = 1000
-    } = selectors;
+  const {
+    sourceSelector,
+    targetSelector,
+    breakpoint = 1000,
+  } = selectors;
 
+  function getElements() {
     const sourceElement = document.querySelector(sourceSelector);
     const targetElement = document.querySelector(targetSelector);
+    return { sourceElement, targetElement };
+  }
 
-    // Строгая проверка элементов
-    if (!sourceElement || !targetElement) {
-        console.warn('MoveElements: Source or target element not found');
-        return null;
+  const { sourceElement, targetElement } = getElements();
+
+  if (!sourceElement || !targetElement) {
+    console.warn('MoveElements: Source or target element not found');
+    return null;
+  }
+
+  if (sourceElement === targetElement) {
+    console.error('MoveElements: Source and target elements cannot be the same');
+    return null;
+  }
+
+  function isMobileView() {
+    return window.innerWidth <= breakpoint;
+  }
+
+  /** Синхронизация по DOM, без флага — не «залипает» после пустого первого запуска */
+  function syncPosition() {
+    const { sourceElement: source, targetElement: target } = getElements();
+    if (!source || !target || source === target) return;
+
+    if (isMobileView()) {
+      const toMove = Array.from(source.children);
+      if (!toMove.length) return;
+
+      target.replaceChildren(...toMove);
+      return;
     }
 
-    // Проверяем, что элементы разные
-    if (sourceElement === targetElement) {
-        console.error('MoveElements: Source and target elements cannot be the same');
-        return null;
-    }
+    const toReturn = Array.from(target.children);
+    if (!toReturn.length) return;
 
-    // Состояние для отслеживания текущего положения
-    let elementsInTarget = false;
+    source.replaceChildren(...toReturn);
+  }
 
-    function isMobileView() {
-        return window.innerWidth <= breakpoint;
-    }
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
 
-    function moveToTarget() {
-        if (!elementsInTarget) {
-            // Сохраняем оригинальные элементы перед перемещением
-            const elementsToMove = Array.from(sourceElement.children);
-            
-            // Очищаем целевой контейнер перед добавлением новых элементов
-            targetElement.innerHTML = '';
-            
-            elementsToMove.forEach(element => {
-                targetElement.appendChild(element);
-            });
-            
-            elementsInTarget = true;
-        }
-    }
+  const debouncedSync = debounce(syncPosition, 150);
+  const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
 
-    function moveBackToSource() {
-        if (elementsInTarget) {
-            // Возвращаем элементы обратно
-            const elementsToReturn = Array.from(targetElement.children);
-            
-            // Очищаем исходный контейнер перед добавлением элементов
-            sourceElement.innerHTML = '';
-            
-            elementsToReturn.forEach(element => {
-                sourceElement.appendChild(element);
-            });
-            
-            elementsInTarget = false;
-        }
-    }
+  function onBreakpointChange() {
+    syncPosition();
+  }
 
-    function handleMove() {
-        if (isMobileView()) {
-            moveToTarget();
-        } else {
-            moveBackToSource();
-        }
-    }
+  function init() {
+    syncPosition();
+    requestAnimationFrame(syncPosition);
 
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
+    window.addEventListener('resize', debouncedSync);
+    window.addEventListener('load', syncPosition);
+    mediaQuery.addEventListener('change', onBreakpointChange);
 
-    function init() {
-        // Начальная проверка и перемещение при загрузке
-        handleMove();
+    return () => {
+      window.removeEventListener('resize', debouncedSync);
+      window.removeEventListener('load', syncPosition);
+      mediaQuery.removeEventListener('change', onBreakpointChange);
 
-        const debouncedHandleMove = debounce(handleMove, 250);
-        window.addEventListener('resize', debouncedHandleMove);
+      const { sourceElement: source, targetElement: target } = getElements();
+      if (!source || !target) return;
 
-        return () => {
-            window.removeEventListener('resize', debouncedHandleMove);
-            // Возвращаем элементы при уничтожении
-            if (elementsInTarget) {
-                moveBackToSource();
-            }
-        };
-    }
+      const toReturn = Array.from(target.children);
+      if (toReturn.length) {
+        source.replaceChildren(...toReturn);
+      }
+    };
+  }
 
-    // Вызываем init() и возвращаем функцию для очистки
-    return init();
+  return init();
 }
 
-// Альтернативный вариант - если нужно гарантировать выполнение после полной загрузки DOM
 export function initMoveElementsOnLoad(selectors) {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => initMoveElements(selectors));
-    } else {
-        return initMoveElements(selectors);
-    }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => initMoveElements(selectors));
+  } else {
+    return initMoveElements(selectors);
+  }
 }
